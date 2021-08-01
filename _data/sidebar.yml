@@ -1,0 +1,86 @@
+guides:
+  use:
+    index: /guides/
+  reg:
+    register: /guides/register.html
+  manage:
+    managepage: /guides/manage.html
+    setresolver: /guides/setresolver.html
+    setrecords: /guides/setrecords.html
+    setotheraddress: /guides/setotheraddress.html
+    setcontent: /guides/setcontent.html
+    setreverse: /guides/setreverse.html
+    renew: /guides/renew.html
+    setcontroller: /guides/setcontroller.html
+    transfer: /guides/transfer.html
+    setsubdomain: /guides/setsubdomain.html
+  exchange:
+    ethex: /guides/ethex.html
+  ensnow:
+    subdomain-registrar: /guides/subdomain-registrar.html
+    subdomain-sell: /guides/subdomain-sell.html
+docs:
+  title:
+    index: /docs/
+  get_started:
+    readme: /docs/readme.html
+    terminology: /docs/terminology.html
+    frequently-asked-questions: /docs/frequently-asked-questions.html
+    ens-deployments: /docs/ens-deployments.html
+    permanent-registrar-faq: /docs/permanent-registrar-faq.html
+    deploying-ens-on-a-private-chain: /docs/deploying-ens-on-a-private-chain.html
+    dns-registrar-guide: /docs/dns-registrar-guide.html
+  dapp-developer-guide:
+    ens-enabling-your-dapp: /docs/dapp-developer-guide/ens-enabling-your-dapp.html
+    ens-libraries: /docs/dapp-developer-guide/ens-libraries.html
+    working-with-ens: /docs/dapp-developer-guide/working-with-ens.html
+    resolving-names: /docs/dapp-developer-guide/resolving-names.html
+    managing-names: /docs/dapp-developer-guide/managing-names.html
+    registering-and-renewing-names: /docs/dapp-developer-guide/registering-and-renewing-names.html
+    front-end-design-guidelines: /docs/dapp-developer-guide/front-end-design-guidelines.html
+    ens-as-nft: /docs/dapp-developer-guide/ens-as-nft.html
+  contract-api-reference:
+    name-processing: /docs/contract-api-reference/name-processing.html
+    ens: /docs/contract-api-reference/ens.html
+    reverseregistrar: /docs/contract-api-reference/reverseregistrar.html
+    testregistrar: /docs/contract-api-reference/testregistrar.html
+    publicresolver: /docs/contract-api-reference/publicresolver.html
+    .eth-permanent-registrar: /docs/contract-api-reference/eth-permanent-registrar/readme.html
+    registrar: /docs/contract-api-reference/eth-permanent-registrar/registrar.html
+    controller: /docs/contract-api-reference/eth-permanent-registrar/controller.html
+    dnsregistrar: /docs/contract-api-reference/dns-registrar.html
+  contract-developer-guide:
+    resolving-names-on-chain: /docs/contract-developer-guide/resolving-names-on-chain.html
+    writing-a-resolver: /docs/contract-developer-guide/writing-a-resolver.html
+    writing-a-registrar: /docs/contract-developer-guide/writing-a-registrar.html
+  ens-migration-february-2020:
+    guide-for-dapp-developers: /docs/ens-migration-february-2020/guide-for-dapp-developers.html
+    technical-description: /docs/ens-migration-february-2020/technical-description.html
+contracts:
+  title:
+    index: /contracts/
+    ensregistry: /contracts/ensregistry.html
+    root: /contracts/root.html
+    multisig: /contracts/multisig.html
+about:
+  title:
+    about-ensuser: /about/
+    about-ens: /about/about-ens.html
+    about-ensdomains: /about/about-ensdomains.html
+    about-domains: /about/about-domains.html
+    about-cooperation: /about/about-cooperation.html
+news:
+  title:
+    index: /news/
+    offical: /categories/官方文章/
+    point-of-view: /categories/观点与评论/
+    discuss-record: /categories/社区交流/
+categories:
+  title:
+    index: /news/
+    offical: /categories/官方文章/
+    point-of-view: /categories/观点与评论/
+    discuss-record: /categories/社区交流/
+tools:
+  title:
+    index: /tools/

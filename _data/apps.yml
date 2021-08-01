@@ -1,0 +1,111 @@
+- name: ENS 管理器
+  description: ENS 官方开发的开源 ENS 管理器 <br>[ <a href="/guides/">使用教程</a> ]
+  link: https://app.ens.domains/
+  icon: ensdomains
+  tags:
+    - ENS官方出品
+    - 工具
+
+- name: ENS 讨论区
+  description: ENS 官方团队建立的交流论坛
+  link: https://discuss.ens.domains/
+  icon: ensdomains
+  tags:
+    - ENS官方出品
+    - 交流
+
+- name: Eth.Link
+  description: 借助 DNS 访问 .eth 域名关联内容 <br>[ <a href="/guides/setcontent.html" target="_blank" rel="noopener external nofollow noreferrer">使用教程</a> ]
+  link: https://eth.link/
+  icon: ensdomains
+  tags:
+    - ENS官方出品
+    - 工具
+
+- name: Fleek
+  description: 让您轻松部署和维护 ENS + IPFS 网站 <br>[ <a href="/news/2021-02-07-fleek-make-ens-ipfs-site-deployment-as-easy-as-ever.html" target="_blank" rel="noopener external noreferrer">使用教程</a> ]
+  link: https://fleek.co/
+  icon: fleek
+  tags:
+    - 工具
+
+- name: ENSNow
+  description: ENS 子域名注册应用（中文版） <br>[ <a href="/guides/subdomain-registrar.html" target="_blank" rel="noopener external noreferrer">使用教程</a> ]
+  link: https://now.ensuser.com/
+  icon: ensuser
+  tags:
+    - ENSUser出品
+    - 工具
+
+- name: ENSUser 工具集
+  description: ENSUser 收集和开发的 ENS 相关工具
+  link: /tools/
+  icon: ensuser
+  tags:
+    - ENSUser出品
+    - 工具
+
+- name: ENS 押金检索认领
+  description: 检索和认领 ENS 早期拍卖时锁定的押金
+  link: https://discuss.ens.domains/
+  icon: ensdomains
+  tags:
+    - ENS官方出品
+    - 工具
+
+- name: Almonit
+  description: 去中心化网站导航，收集了许多利用 ENS + IPFS 建设的网站。
+  link: https://almonit.eth.link/
+  icon: almonit
+  tags:
+    - 导航
+
+- name: OpenSea
+  description: 一个去中心化的 NFT 资产交易平台 <br>[ <a href="/guides/ethex.html" target="_blank" rel="noopener external noreferrer">使用教程</a> ]
+  link: https://opensea.io/
+  icon: opensea
+  tags:
+    - 交易
+
+- name: Rarible
+  description: 一个去中心化的 NFT 资产交易平台
+  link: https://rarible.com/
+  icon: rarible
+  tags:
+    - 交易
+
+- name: ENS Subgraph
+  description: 通过简单的语法查询 ENS 事件信息
+  link: https://thegraph.com/explorer/subgraph/ensdomains/ens
+  icon: thegraph
+  tags:
+    - 工具
+
+- name: ENS Analytics
+  description: ENS 数据分析面板
+  link: https://duneanalytics.com/makoto
+  icon: dune-analytics
+  tags:
+    - 工具
+
+- name: Etherscan（中文版）
+  description: 最流行的以太坊区块链浏览器
+  link: https://cn.etherscan.com/
+  icon: etherscan
+  tags:
+    - 浏览器
+    - 工具
+
+- name: Metamask
+  description: 以太坊钱包，支持打开 ENS 域名指向的网站
+  link: https://metamask.io/
+  icon: metamask
+  tags:
+    - 钱包
+
+- name: eth.af
+  description: 通过 ENS 域名查询相应账户持有的代币
+  link: https://eth.af/
+  icon: eth-af
+  tags:
+    - 工具
