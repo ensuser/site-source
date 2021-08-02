@@ -4,7 +4,7 @@
 2. [ENSUser.com](https://ensuer.com/) 网站是社区的一部分，主要用于向 ENS 域名的用户提供相关服务。
 3. [此 site-source 代码库](https://github.com/ensuser/site-source)保存着 ENSUser.com 网站内容的源文件。
 
-## 诚邀
+## 诚邀修订
 
 ENSUser 是一个自发的 ENS 中文社区，网站内容来自 ENS 官方内容的翻译和社区成员的创作。
 
@@ -12,7 +12,7 @@ ENSUser 是一个自发的 ENS 中文社区，网站内容来自 ENS 官方内�
 
 所以，我们**诚挚地邀请**您与我们一同修订网站内容，让更多的人从中受益，社区也会记下您的一份贡献。
 
-## 改进方式
+## 修订方式
 
 当您浏览 [ENSUser.com](https://ensuer.com/) 网站时，如果发现需要修订的内容，您可以通过以下几种方式帮助修订文章内容：
 
