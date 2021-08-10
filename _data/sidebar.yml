@@ -30,6 +30,7 @@ docs:
     permanent-registrar-faq: /docs/permanent-registrar-faq.html
     deploying-ens-on-a-private-chain: /docs/deploying-ens-on-a-private-chain.html
     dns-registrar-guide: /docs/dns-registrar-guide.html
+    bug-bounty-program: /docs/bug-bounty-program.html
   dapp-developer-guide:
     ens-enabling-your-dapp: /docs/dapp-developer-guide/ens-enabling-your-dapp.html
     ens-libraries: /docs/dapp-developer-guide/ens-libraries.html

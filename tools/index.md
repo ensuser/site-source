@@ -7,6 +7,7 @@ need: find_app
 </ul>
 
 <script>
+// 本页面以 Javascript 为主，修改前，请先将内容格式化，方便查看。
 // 每组数据表示：
 // [ ( with input ), 链接前缀, 链接后缀, 需要输入到文本框的内容格式, 查询标题, placeholder]
 // [ ( without input ), 链接, 查询标题]
