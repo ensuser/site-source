@@ -47,7 +47,7 @@
 
 - name: ENS 押金检索认领
   description: 检索和认领 ENS 早期拍卖时锁定的押金
-  link: https://discuss.ens.domains/
+  link: https://reclaim.ens.domains/
   icon: ensdomains
   tags:
     - ENS官方出品
