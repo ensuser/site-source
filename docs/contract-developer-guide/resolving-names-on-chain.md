@@ -6,12 +6,12 @@ title: 链上 ENS 域名解析
 目前还没有用于链上解析的可靠库，但是 ENS 解析非常简单，不需要库也可以轻松完成。首先，我们定义了一些只包含必要方法的简化接口，:
 
 ```text
-contract ENS {
-    function resolver(bytes32 node) constant returns (Resolver);
+abstract contract ENS {
+    function resolver(bytes32 node) public virtual view returns (Resolver);
 }
 
-contract Resolver {
-    function addr(bytes32 node) constant returns (address);
+abstract contract Resolver {
+    function addr(bytes32 node) public virtual view returns (address);
 }
 ```
 
@@ -21,14 +21,15 @@ contract Resolver {
 
 ```text
 contract MyContract {
-    ENS ens;
+    // Same address for Mainet, Ropsten, Rinkerby, Gorli and other networks;
+    ENS ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);
 
-    function MyContract(address ensAddress) {
+    function MyContract(address ensAddress) public {
         ens = ENS(ensAddress);
     }
 
-    function resolve(bytes32 node) constant returns(address) {
-        var resolver = ens.resolver(node)
+    function resolve(bytes32 node) public view returns(address) {
+        Resolver resolver = ens.resolver(node)
         return resolver.addr(node);
     }
 }

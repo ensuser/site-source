@@ -29,16 +29,21 @@ ENS 支持多种主流语言。如果有些你知道的 ENS 库没有在本页�
 
 #### 直接访问智能合约
 
-当前所有的 ENS 智能合约都是 [Truffle](https://truffleframework.com) 项目，而且是作为 npm 模块（比如：[ENS 注册表](https://www.npmjs.com/package/@ensdomains/ens)）发布的。如果你想访问以上库都不支持的函数，可以通过 npm 安装智能合约。
+当前所有的 ENS 智能合约都是作为 `@ensdomains/ens-contracts` [npm 模块](https://github.com/ensdomains/ens-contracts) 发布的。
 
-* [解析器](https://www.npmjs.com/package/@ensdomains/resolver) = `Resolver.sol` 包含了所有的函数名（包括已经弃用的函数，比如：`content`）
-* [永久注册器](https://www.npmjs.com/package/@ensdomains/ethregistrar)
-* [注册表和旧注册器](https://www.npmjs.com/package/@ensdomains/ens)
-
-字节码和 ABI 是预编译的，可以从模块中导入。
+在前端代码中包含 ABI 的方法：
 
 ```text
-import { abi , bytecode } from '@ensdomains/ens/build/contracts/ENS.json'
+import {
+  ENS,
+  PublicResolver
+} from '@ensdomains/ens-contracts'`
+```
+
+在 Solidity 中导入 ENS 智能合约的方法：
+
+```text
+import '@ensdomains/ens-contracts/contracts/registry/ENS.sol';
 ```
 
 ### Java

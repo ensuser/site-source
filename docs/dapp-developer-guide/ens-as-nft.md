@@ -80,3 +80,9 @@ contract DCLRegistrar is ERC721Full, Ownable {
 一旦部署完成，您就必须将控制器地址转移到该合约。
 
 对于非技术用户，我们目前正在升级我们的 `SubdomainRegistrar`，它能让你不用写代码也可以将你的子域名变成 NFT。
+
+## 元数据（Metadata）
+
+.eth does not have `.tokenURI` . However, we created a separate metadata service which NFT marketlpaces like OpenSea can fetch metadata for ENS such as registration data, expiration date, name length, etc. For more detail, please refer to the metadata documentation site.
+
+.eth 没有 `.tokenURI`。然而，我们创建了一个独立的元数据服务，OpenSea 等 NFT 市场 可以获取 ENS 的元数据，如注册数据、过期时间、域名长度等。要了解更多细节，请参考[元数据文档](https://metadata.ens.domains/docs)。
