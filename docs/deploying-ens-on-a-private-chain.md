@@ -114,7 +114,7 @@ async function setupReverseRegistrar(ens, resolver, reverseRegistrar, accounts) 
 // These imports are here to force Hardhat to compile contracts we depend on in our tests but don't need anywhere else.
 import "@ensdomains/ens-contracts/contracts/registry/ENSRegistry.sol";
 import "@ensdomains/ens-contracts/contracts/registry/FIFSRegistrar.sol";
-import "@ensdomains/ens-contracts/contracts/registry/ReverseRegistrar.sol";
+import "@ensdomains/ens-contracts/contracts/resolvers/PublicResolver.sol";
 ```
 
 ### script/deploy.js

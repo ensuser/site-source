@@ -27,7 +27,7 @@ description: 这篇文章中，我们会介绍如何将 ENS 域名解析至 IPFS
 
 {% note info %}
 
-1. 在浏览器上打开 [ENS 管理器](https://app.ens.domains/)，并使用域名的**管理员账户** [连接](index.html#在浏览器中连接)。
+1. 在浏览器上打开 [ENS APP](https://app.ens.domains/)，并使用域名的**管理员账户** [连接](index.html#在浏览器中连接)。
 2. 输入 `ceshi.eth` 并点击 `查询` 按钮，进入 `ceshi.eth` 的管理页面。
 3. 在 `解析记录` 区域中点击 `+` 按钮展开记录添加区域。
 4. 点击 `选择一种类型` 下拉菜单，从中选择 `内容哈希` 选项。
@@ -39,7 +39,7 @@ description: 这篇文章中，我们会介绍如何将 ENS 域名解析至 IPFS
 {% endnote %}
 
 
-因为 ENS 管理器自动为 IPFS 内容设置了访问链接，我们可以通过在管理页面上点击这个 IPFS 地址 `ipfs://QmQNKJ...TH6M` 来访问这些内容（打不开该页面的童鞋请自寻巧妙办法）：
+因为 ENS APP 自动为 IPFS 内容设置了访问链接，我们可以通过在管理页面上点击这个 IPFS 地址 `ipfs://QmQNKJ...TH6M` 来访问这些内容（打不开该页面的童鞋请自寻巧妙办法）：
 
 ![](/images/guides/setcontent/setcontent-02.png)
 

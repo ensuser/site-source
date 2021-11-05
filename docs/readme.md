@@ -15,7 +15,7 @@ ENS 的目标与 DNS（互联网域名服务）类似，但由于以太坊区块
 
 ENS 部署在以太坊主网络和几个测试网络上。如果你使用 [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs) Javascript 库或终端用户应用程序，它将自动检测与你交互的网络并在该网络上部署 ENS。
 
-你现在就可以通过 [ENS 管理器](https://app.ens.domains/) 或 [ENS 官方主页](https://ens.domains/) 上的 ENS 应用程序，来试用 ENS。
+你现在就可以通过 [ENS APP](https://app.ens.domains/) 或 [ENS 官方主页](https://ens.domains/) 上的 ENS 应用程序，来试用 ENS。
 
 ## ENS 架构
 

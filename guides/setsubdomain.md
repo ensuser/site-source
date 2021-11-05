@@ -42,7 +42,7 @@ description: ENS域名的管理员可以根据需要注册其子域名，还可�
 
 {% note info %}
 
-1. 在浏览器上打开 [ENS 管理器](https://app.ens.domains/)，并使用域名的**管理员账户** [连接](index.html#在浏览器中连接)。
+1. 在浏览器上打开 [ENS APP](https://app.ens.domains/)，并使用域名的**管理员账户** [连接](index.html#在浏览器中连接)。
 2. 输入 `ceshi.eth` 并点击 `查询` 按钮，进入 `ceshi.eth` 的管理页面。
 3. 在页面右上方点击 `子域名` 按钮，打开子域名管理页面
 4. 点击 `+ 添加子域名` 按钮，页面上显示出一个文本框，在这里输入想要注册的子域名标签，比如我们要注册 `kobe.ceshi.eth` 这个子域名，就需要在这里输入 `kobe` 。
@@ -53,7 +53,7 @@ description: ENS域名的管理员可以根据需要注册其子域名，还可�
 
 ### 子域名相关信息
 
-使用 ENS 管理器查询子域名 `kobe.ceshi.eth` 可以看到相关信息如下：
+使用 ENS APP 查询子域名 `kobe.ceshi.eth` 可以看到相关信息如下：
 
 ![](/images/guides/setsubdomain/setsubdomain-05.png)
 

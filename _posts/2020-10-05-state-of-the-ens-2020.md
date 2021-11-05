@@ -18,7 +18,7 @@ description:
 - 域名总量 = 31 万 → 19 万
 - 整合 ENS 的去中心化应用和钱包的数量 = 28 → 158
 - 支持币种数量 = 10 → 27
-- ENS 管理器支持的语种数量 = 1 → 10
+- ENS APP 支持的语种数量 = 1 → 10
 - （2019 年 10 月 1 日以来）通过注册和更新以太坊域名获得的总收入 = 5513 ETH（[注册费共计 3982 ETH](https://explore.duneanalytics.com/queries/10007) + [更新费共计 1531 ETH](https://explore.duneanalytics.com/queries/10008)）
 
 你可能已经注意到了，域名总量已经从 31 万骤降至 19 万。这是因为 ENS 变成年费模式后，很多域名已经过期。这使得其他用户可以注册未使用的域名，因此这不一定是件坏事。
@@ -95,7 +95,7 @@ DevCon5 和 Nick 的婚礼结束后，我们马上收到了关于我们的 ENS �
 
 ![- https://github.com/orgs/ensdomains/projects/1 -](/images/news/2020-10-05-state-of-the-ens-2020/06.png)
 
-我们的重点主要放在 DNSSEC 集成、bug 修复以及改进我们的 ENS 管理器应用上。
+我们的重点主要放在 DNSSEC 集成、bug 修复以及改进我们的 ENS APP 应用上。
 
 从更长远的目标来看，我们会在即将举行的 ENS 研讨会上展开讨论。如果有任何你想讨论的话题，请参与我们的[讨论频道](https://discuss.ens.domains/c/workshop2020/8)。
 

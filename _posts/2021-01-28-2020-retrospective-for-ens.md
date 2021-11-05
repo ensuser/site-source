@@ -59,13 +59,13 @@ Vitalik 提出了一种使 ENS 的一部分与 L2 兼容的方法，并在我们
 
 ## 其他新功能
 
-- 现在，ENS 主页和 [ENS 管理器](http://app.ens.domains/)都[支持 10 种语言](https://medium.com/the-ethereum-name-service/ens-is-now-in-10-languages-86e5cb529ddd)。
+- 现在，ENS 主页和 [ENS APP](http://app.ens.domains/) 都[支持 10 种语言](https://medium.com/the-ethereum-name-service/ens-is-now-in-10-languages-86e5cb529ddd)。
 - 我们现在有[专用的工具](https://medium.com/the-ethereum-name-service/how-to-get-back-an-old-deposit-1e2b1767b930)，可用来回收在 2019 年 5 月之前系统中注册的 .ETH 域名的押金。
-- ENS 管理器现在支持[自定义文本记录](https://ensuser.com/news/2020-03-20-new-custom-text-records.html)，这意味着用户或项目可以使用 ENS 来存储任意数据。
+- ENS APP 现在支持[自定义文本记录](https://ensuser.com/news/2020-03-20-new-custom-text-records.html)，这意味着用户或项目可以使用 ENS 来存储任意数据。
 - 我们将[地址编码库中支持的区块链数量](https://medium.com/the-ethereum-name-service/ens-now-supports-109-blockchain-addresses-5307ce5d2106)大大扩展到 110 多个。我们现在认为，对多币种的支持足够深，可以包含绝大多数用户希望使用其 ENS 域名接收的几乎所有区块链资产。
-- 我们扩大了用户将其钱包连接到 ENS 管理器的方式，而不仅仅是 MetaMask 这样的注入提供商，现在还包括 WalletConnect、Portis、Torus、Authereum 和 MEW 钱包。
+- 我们扩大了用户将其钱包连接到 ENS APP 的方式，而不仅仅是 MetaMask 这样的注入提供商，现在还包括 WalletConnect、Portis、Torus、Authereum 和 MEW 钱包。
 - 我们发布了 JS 库 [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs) 的 2 版本。目前已经有 [12 个顶级库](https://ensuser.com/docs/dapp-developer-guide/ens-libraries.html)支持 ENS，但不是所有的库能够全方位的支持所有 ENS 功能。我们的库支持大多数操作。
-- 用户现在使用 ENS 管理器，可以通过一笔交易来设置多个记录。
+- 用户现在使用 ENS APP，可以通过一笔交易来设置多个记录。
 
 ## 其他值得注意的事情
 
@@ -94,6 +94,6 @@ Vitalik 提出了一种使 ENS 的一部分与 L2 兼容的方法，并在我们
 
 ## 继续前进
 
-2021 年对于我们来说，一个重要的项目将是实施 L2 计划，这将使用户能够将解析记录和子域名放在他们选择的 L2 上，从而大大降低了这些操作和管理的 Gas 成本。我们还计划改善子域名服务和 ENS 管理器的功能，当然还支持集成数量的持续增长。
+2021 年对于我们来说，一个重要的项目将是实施 L2 计划，这将使用户能够将解析记录和子域名放在他们选择的 L2 上，从而大大降低了这些操作和管理的 Gas 成本。我们还计划改善子域名服务和 ENS APP 的功能，当然还支持集成数量的持续增长。
 
 您可以在我们的论坛上阅读和讨论[我们的 2021 年路线图](/news/2021-01-30-2021-ens-roadmap.html)。ENS 一直是开源和社区驱动的项目。我们非常感谢大家提供的所有帮助，建议和贡献！

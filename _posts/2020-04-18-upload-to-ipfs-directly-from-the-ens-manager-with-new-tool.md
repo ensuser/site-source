@@ -7,11 +7,11 @@ translator: 荒野重生
 description: 
 ---
 
-> 译注：这是 Brantly Millegan 发布的一个教程，目前在 ENS 管理器内已经直接整合了 Temporal Cloud 的服务，用户需要注册 Temporal Cloud 帐户，免费帐户可以有 3GB 空间，亲测有效。
+> 译注：这是 Brantly Millegan 发布的一个教程，目前在 ENS APP 内已经直接整合了 Temporal Cloud 的服务，用户需要注册 Temporal Cloud 帐户，免费帐户可以有 3GB 空间，亲测有效。
 
 ![](/images/news/2020-04-18-upload-to-ipfs-directly-from-the-ens-manager-with-new-tool/01.png)
 
-我们上线了一个新的工具，允许用户上传文件到 IPFS 并直接在 [ENS 管理器](https://app.ens.domains/) 中将此 IPFS 内容的哈希值保存到他的 ENS 记录中。该工具使用 IPFS 固定服务 [Temporal Cloud](https://temporal.cloud/) 。
+我们上线了一个新的工具，允许用户上传文件到 IPFS 并直接在 [ENS APP](https://app.ens.domains/) 中将此 IPFS 内容的哈希值保存到他的 ENS 记录中。该工具使用 IPFS 固定服务 [Temporal Cloud](https://temporal.cloud/) 。
 
 以前，用户必须在一个地方将文件上传到 IPFS，然后在另一个地方更新他们的 ENS 记录。今天介绍的工具大大简化了这一过程，让人们可以更轻松地部署[去中心化的网站](https://medium.com/the-ethereum-name-service/all-the-ways-you-can-surf-the-decentralized-web-today-bf8e7a42fa27)。
 
@@ -23,11 +23,11 @@ Web3 浏览器：在台式机上，它可以是任何主流浏览器，例如具
 
 一些以太币：您将需要少量（价值几美分的以太币）加密货币以支付以太坊网络交易费。
 
-ETH 域名：如果您还没有.ETH 名称，则可以在 ENS 管理器中注册一个 .ETH 域名（ [注册教程](https://ensuser.com/guides/register.html) ）。
+ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一个 .ETH 域名（ [注册教程](https://ensuser.com/guides/register.html) ）。
 
 ### 1. 选择创建一个新的内容记录
 
-打开 [ENS 管理器](https://app.ens.domains/)，然后搜索您的 .ETH 域名。如果您还没有内容记录，请单击右侧的 `+` 按钮，然后从下拉菜单中选择 `内容哈希`。
+打开 [ENS APP](https://app.ens.domains/)，然后搜索您的 .ETH 域名。如果您还没有内容记录，请单击右侧的 `+` 按钮，然后从下拉菜单中选择 `内容哈希`。
 
 如果您已有内容记录，请跳过此步骤。
 

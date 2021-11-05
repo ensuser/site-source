@@ -13,7 +13,7 @@ description:
 
 ![](/images/news/2020-06-06-ens-is-now-in-chinese-how-you-can-help-us-get-more-languages/01.png)
 
-我们很荣幸地宣布，您现在可以在 [ENS 管理器](https://app.ens.domains/) 上进行英文和中文之间的切换了。并且，我们希望您能帮助我们添加更多的语言。
+我们很荣幸地宣布，您现在可以在 [ENS APP](https://app.ens.domains/) 上进行英文和中文之间的切换了。并且，我们希望您能帮助我们添加更多的语言。
 
 ## 翻译成中文
 
@@ -27,7 +27,7 @@ description:
 
 ## 添加更多语言
 
-我们希望 ENS 管理器可以支持更多语言，使其尽可能地方便用户使用。
+我们希望 ENS APP 可以支持更多语言，使其尽可能地方便用户使用。
 
 我们已经发布了 [如何在 Github 上添加新翻译的说明](https://github.com/ensdomains/ens-app#internationalisation)。我们还为那些不想使用 Github 的人准备了一个 [谷歌电子表格](https://docs.google.com/spreadsheets/d/1FlK2AjzugQ6X4ljpBenqcXqwyOi1opWda07URHTmBis/edit?usp=sharing)（任何人都可以对翻译和更正发表评论，如果你想进行大量的翻译，可以通过邮件联系 brantly@ens.domains）。
 

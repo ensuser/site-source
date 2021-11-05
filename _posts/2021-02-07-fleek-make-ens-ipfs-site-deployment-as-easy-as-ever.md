@@ -10,7 +10,7 @@ description:
 
 ![](/images/news/2021-02-07-fleek-make-ens-ipfs-site-deployment-as-easy-as-ever/01.jpeg)
 
-现在，[eth.link 的 ENS+IPFS 服务已经在 Cloudflare 上运行](/news/2021-01-14-ens-partners-with-cloudflare-on-improved-eth-link-service.html)，通过在 IPFS 上维护 [ENS 管理器](http://app.ens.domains/)的副本 https://app.ens.eth.link （如果你有 MetaMask、Opera、Brave 或其他兼容的浏览器，也可以直接访问 app.ens.eth），我们对当前的基础设施以及使用自己开发的程序信心十足。能做到这些，我们借助了 [Fleek](https://fleek.co/) 的服务。
+现在，[eth.link 的 ENS+IPFS 服务已经在 Cloudflare 上运行](/news/2021-01-14-ens-partners-with-cloudflare-on-improved-eth-link-service.html)，通过在 IPFS 上维护 [ENS APP](http://app.ens.domains/) 的副本 https://app.ens.eth.link （如果你有 MetaMask、Opera、Brave 或其他兼容的浏览器，也可以直接访问 app.ens.eth），我们对当前的基础设施以及使用自己开发的程序信心十足。能做到这些，我们借助了 [Fleek](https://fleek.co/) 的服务。
 
 以下是一个简易教程，以便将您的网站部署到 ENS+IPFS。
 
@@ -38,7 +38,7 @@ description:
 
 ![](/images/news/2021-02-07-fleek-make-ens-ipfs-site-deployment-as-easy-as-ever/04.png)
 
-如果你并不某个 ENS 域名的注册人（例如，你是在一个项目团队工作），那么你需要让域名的所有者在 ENS 管理器中手动设置管理员。
+如果你并不某个 ENS 域名的注册人（例如，你是在一个项目团队工作），那么你需要让域名的所有者在 ENS APP 中手动设置管理员。
 
 令人惊讶的是，Fleek 每次更新 ENS 的内容记录都要替用户支付 Gas。
 
@@ -48,13 +48,13 @@ description:
 
 当你使用 eth.link 网关链接到您的网站，或是将 IPFS 站点部署到一个 ENS 二级域名（比如 ensuser.eth）时，您完全不需要为 SSL 证书的事情操心：我们已经为 *.eth 通配符设置了 SSL 证书。
 
-如果您我们的 ENS 管理器中手动更新子域名上的内容记录，您也不必做任何事情，因为管理器会告诉 Cloudflare 为每个子域名创建一个新的证书。对于那些在 eth.link 迁移到 Cloudflare 之前就已经设置了记录的子域名，我们运行了一个批处理脚本来请求证书，所以在大多数情况下你不需要做什么。如果有遗漏的情况，请按下面步骤操作。
+如果您我们的 ENS APP 中手动更新子域名上的内容记录，您也不必做任何事情，因为管理器会告诉 Cloudflare 为每个子域名创建一个新的证书。对于那些在 eth.link 迁移到 Cloudflare 之前就已经设置了记录的子域名，我们运行了一个批处理脚本来请求证书，所以在大多数情况下你不需要做什么。如果有遗漏的情况，请按下面步骤操作。
 
-当您让 Fleek（或其他未使用 ENS 管理器的方式）在子域名上设置内容哈希记录时，您需要在 ENS 管理器上单击 “请求 SSL 证书” 按钮。创建新的 SSL 证书需要的时间一般不超过 30 秒。
+当您让 Fleek（或其他未使用 ENS APP 的方式）在子域名上设置内容哈希记录时，您需要在 ENS APP 上单击 “请求 SSL 证书” 按钮。创建新的 SSL 证书需要的时间一般不超过 30 秒。
 
 ![](/images/news/2021-02-07-fleek-make-ens-ipfs-site-deployment-as-easy-as-ever/06.png)
 
-然后，ENS 管理器发送一个 PUT 请求到 https://eth.link/names/{subdomain.yourdomain.eth}.link ，如果给定的域名存在并且设置了内容哈希，则创建证书。如果您需要自己自动化这个过程，您也可以这样做。
+然后，ENS APP 发送一个 PUT 请求到 https://eth.link/names/{subdomain.yourdomain.eth}.link ，如果给定的域名存在并且设置了内容哈希，则创建证书。如果您需要自己自动化这个过程，您也可以这样做。
 
 这就是我要说的！多亏了 Fleek 和 Cloudflare 等公司的努力，部署和访问 ENS+IPFS 网站和以往一样简单。
 

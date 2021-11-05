@@ -1,5 +1,5 @@
-- name: ENS 管理器
-  description: ENS 官方开发的开源 ENS 管理器 <br>[ <a href="/guides/">使用教程</a> ]
+- name: ENS APP
+  description: ENS 官方开发的开源 ENS APP <br>[ <a href="/guides/">使用教程</a> ]
   link: https://app.ens.domains/
   icon: ensdomains
   tags:

@@ -158,7 +158,7 @@ ens.setText('iam.alice.eth', 'Test', 'Test record', {from: ...});
 
 要达到上述效果，地址的所有者必须为其地址配置反向解析。配置反向解析通过调用反向解析器上的 `claim()` 方法来实现，该方法的专用名为 “addr.reverse” 。
 
-配置反向解析通常是通过诸如 [ENS 管理器](https://app.ens.domains/) 这样的用户界面来实现的。 go-ens 和 web3.py 也可以提供这项功能：
+配置反向解析通常是通过诸如 [ENS APP](https://app.ens.domains/) 这样的用户界面来实现的。 go-ens 和 web3.py 也可以提供这项功能：
 
 采用 **go-ens** 时：
 

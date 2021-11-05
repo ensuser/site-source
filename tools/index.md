@@ -52,7 +52,7 @@ var linkArray = [
         "https://app.ens.domains/name/",
         "",
         "name",
-        "查询某个 ENS 域名的详细信息（利用 ENS 管理器）",
+        "查询某个 ENS 域名的详细信息（利用 ENS APP）",
         "请输入 ENS 域名"
     ],
     [
@@ -84,7 +84,7 @@ var linkArray = [
         "https://app.ens.domains/address/",
         "",
         "address",
-        "查看某个地址持有的 ENS 域名（利用 ENS 管理器）",
+        "查看某个地址持有的 ENS 域名（利用 ENS APP）",
         "请输入以太坊地址"
     ],
     [

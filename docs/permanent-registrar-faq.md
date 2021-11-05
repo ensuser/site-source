@@ -17,7 +17,7 @@ title: 关于 ENS 注册器的常见问题
 
 ### 如果我有多个不同的 ENS 域名，它们的续费时间不同怎么办
 
-你可以在 ENS 管理器中的“我的域名”页面一次性地给多个域名延长注册年限。
+你可以在 ENS APP 中的“我的域名”页面一次性地给多个域名延长注册年限。
 
 ### 如何续费
 
@@ -49,7 +49,7 @@ title: 关于 ENS 注册器的常见问题
 
 ### 从哪里可以管理我的 ENS 域名
 
-只需前往 ENS 管理器 [app.ens.domains](https://app.ens.domains/) ，然后点击“我的域名”。
+只需前往 ENS APP [app.ens.domains](https://app.ens.domains/) ，然后点击“我的域名”。
 
 ### 我可以在 NFT 交易所交易 ENS 域名吗
 
@@ -57,7 +57,7 @@ title: 关于 ENS 注册器的常见问题
 
 ### 如何将 .eth 注册表中注册的域名转让给其他人
 
-你可以使用 [ENS 管理器](https://app.ens.domains/) 或其他支持 NFT 的工具来实现转让。
+你可以使用 [ENS APP](https://app.ens.domains/) 或其他支持 NFT 的工具来实现转让。
 
 ### 除了注册费之外，还有什么因素可以防止大规模抢注域名
 

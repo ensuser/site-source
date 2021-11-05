@@ -21,25 +21,25 @@ description: 只要是ENS用户，都需要进行ENS注册与管理，本教程�
 - **ENS 域名管理**：介绍 ENS 域名的一些基本功能及其操作步骤，主要面向有个性化设置需求的用户。内容有包括 [设置解析器](setresolver.html#设置解析器)、[设置解析记录](setresolver.html#设置解析记录)、[设置反向解析](setreverse.html)、[域名续费](renew.html)、[更换域名管理员](setcontroller.html)、[域名过户](transfer.html)、[设置多种解析记录](setcontent.html)、[子域名管理](setsubdomain.html) 等。
 - **ENSNow**：介绍 [ENSNow 子域名注册工具](subdomain-registrar.html) 并演示如何免费注册一个子域名。
 
-## ENS 管理器是什么
+## ENS APP 是什么
 
-ENS 管理器是负责帮助用户操作 ENS 相关智能合约的应用，普通用户要注册与管理 ENS 域名，就需要通过 ENS 管理器与相关的智能合约进行交互。
+ENS APP 是负责帮助用户操作 ENS 相关智能合约的应用，普通用户要注册与管理 ENS 域名，就需要通过 ENS APP 与相关的智能合约进行交互。
 
-任何人都可以开发并部署 ENS 管理器，尽管可以实现类似的功能，但从可靠性和可用性来看，强烈建议您使用由 ENS 官方团队开发并部署的管理器：
+任何人都可以开发并部署 ENS APP ，尽管可以实现类似的功能，但从可靠性和可用性来看，强烈建议您使用由 ENS 官方团队开发并部署的管理器：
 
 <div class="special-wrapper">
     <a class="big-button" href="https://app.ens.domains/">ENS APP</a>
 </div>
 
-## 连接 ENS 管理器
+## 连接 ENS APP
 
-使用 ENS 管理器之前需要将你的以太坊账户与其进行连接，告诉管理器是哪个账户要进行操作。下面分别说明在浏览器和手机钱包中连接 ENS 管理器的情形。
+使用 ENS APP 之前需要将你的以太坊账户与其进行连接，告诉管理器是哪个账户要进行操作。下面分别说明在浏览器和手机钱包中连接 ENS APP 的情形。
 
 ### 在浏览器中连接
 
 浏览器安装 Metamask 插件后，在 Metamask 中选择需要进行操作的以太坊账户。
 
-在浏览器里打开 [ENS 管理器](https://app.ens.domains/) ，这时管理器会要求与以太坊账户进行连接，点击 `连接` 按钮后，如果没有其他提示，则表示连接成功。中文用户可以在中间搜索框靠右的位置将显示语言由 `EN` 切换为 `CN`。
+在浏览器里打开 [ENS APP](https://app.ens.domains/) ，这时管理器会要求与以太坊账户进行连接，点击 `连接` 按钮后，如果没有其他提示，则表示连接成功。中文用户可以在中间搜索框靠右的位置将显示语言由 `EN` 切换为 `CN`。
 
 ![](/images/guides/connect-05.png)
 
@@ -51,4 +51,4 @@ ENS 管理器是负责帮助用户操作 ENS 相关智能合约的应用，普�
 
 ### 在手机钱包中连接
 
-在手机钱包（比如 imToken）选择需要进行操作的以太坊账户，打开 ENS 应用或直接输入 ENS 管理器地址，并按照提示建立连接。
+在手机钱包（比如 imToken）选择需要进行操作的以太坊账户，打开 ENS 应用或直接输入 ENS APP 地址，并按照提示建立连接。
