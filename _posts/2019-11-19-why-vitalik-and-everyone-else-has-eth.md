@@ -31,7 +31,7 @@ ENS 是 [被最广泛采用的基于区块链的域名系统](https://twitter.co
 
 想要使用你自己的 `.ETH` 域名，并将其放入你的 Twitter 资料中？
 
-你可以通过 [ENSNow 中文版](https://now.ensuser.com/) 快速获得一个便宜的子域名。还有人也建立专门出售子域名的网站，比如 [Nameth](https://nameth.io/) 和 [Ethmojis](https://ethmojis.com/)。
+你可以通过 [ENSNow](https://now.ens.domains/) 快速获得一个便宜的子域名。还有人也建立专门出售子域名的网站，比如 [Nameth](https://nameth.io/) 和 [Ethmojis](https://ethmojis.com/)。
 
 或者，您可以通过我们的 [ENS APP](https://app.ens.domains/) 立即 [注册和管理](https://ensuser.com/guides/) 您自己的主用 `.ETH` 域名。
 

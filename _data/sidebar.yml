@@ -16,9 +16,6 @@ guides:
     setsubdomain: /guides/setsubdomain.html
   exchange:
     ethex: /guides/ethex.html
-  ensnow:
-    subdomain-registrar: /guides/subdomain-registrar.html
-    subdomain-sell: /guides/subdomain-sell.html
 docs:
   title:
     index: /docs/

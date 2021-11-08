@@ -34,7 +34,7 @@ categories: 官方文章
 
 ## 迁移子域名
 
-我们统一迁移了所有的二级域名（比如 ceshi.eth）以及由子域名注册器（比如 [https://now.ensuser.com/](https://now.ensuser.com/)）分配的子域名，但是不包括用户自己手动创建的子域名。
+我们统一迁移了所有的二级域名（比如 ceshi.eth）以及由子域名注册器 [ENSNow](https://now.ens.domains/) 分配的子域名，但是不包括用户自己手动创建的子域名。
 
 对于手动创建的子域名，您必须在 ENS APP的子域名管理页面点击 `Migrate` 按钮来迁移到新的注册表。
 

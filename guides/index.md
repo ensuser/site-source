@@ -19,7 +19,6 @@ description: 只要是ENS用户，都需要进行ENS注册与管理，本教程�
 
 - **ENS 域名注册**：介绍并演示如何 [注册 .eth 域名](register.html)。
 - **ENS 域名管理**：介绍 ENS 域名的一些基本功能及其操作步骤，主要面向有个性化设置需求的用户。内容有包括 [设置解析器](setresolver.html#设置解析器)、[设置解析记录](setresolver.html#设置解析记录)、[设置反向解析](setreverse.html)、[域名续费](renew.html)、[更换域名管理员](setcontroller.html)、[域名过户](transfer.html)、[设置多种解析记录](setcontent.html)、[子域名管理](setsubdomain.html) 等。
-- **ENSNow**：介绍 [ENSNow 子域名注册工具](subdomain-registrar.html) 并演示如何免费注册一个子域名。
 
 ## ENS APP 是什么
 

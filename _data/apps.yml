@@ -29,14 +29,6 @@
   tags:
     - 工具
 
-- name: ENSNow
-  description: ENS 子域名注册应用（中文版） <br>[ <a href="/guides/subdomain-registrar.html" target="_blank" rel="noopener external noreferrer">使用教程</a> ]
-  link: https://now.ensuser.com/
-  icon: ensuser
-  tags:
-    - ENSUser出品
-    - 工具
-
 - name: ENSUser 工具集
   description: ENSUser 收集和开发的 ENS 相关工具
   link: /tools/
