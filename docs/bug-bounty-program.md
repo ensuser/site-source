@@ -15,7 +15,7 @@ ENS 漏洞奖金计划用于奖励那些在本计划涉及的 ENS 智能合约�
 
 奖金额度与漏洞严重性相关，漏洞严重性根据 Impact and Likelihood 的 OWASP 风险评级模型计算：
 
-![](/images/docs/ens_bug_bounty_1.png)
+![](/images/docs/owasp_w600.png)
 
 奖金额度遵循以下规则，但最终由 ENS 团队自行决定
 
