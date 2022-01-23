@@ -271,10 +271,11 @@ ENS 并不强制要求反向记录的准确性。例如，每个人都可以声�
 
 ```javascript
 const address = '0x1234...';
-var name = await ens.getName(address)
-// Check to be sure the reverse record is correct.
-if(address != await ens.name(name).getAddress()) {
-  name = null;
+let ensName = null;
+({ name: ensName } = await ens.getName(address))
+// Check to be sure the reverse record is correct. skip check if the name is null
+if(ensName == null || address != await ens.name(ensName).getAddress()) {
+  ensName = null;
 }
 ```
 

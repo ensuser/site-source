@@ -28,6 +28,17 @@ docs:
     deploying-ens-on-a-private-chain: /docs/deploying-ens-on-a-private-chain.html
     dns-registrar-guide: /docs/dns-registrar-guide.html
     bug-bounty-program: /docs/bug-bounty-program.html
+  ensip:
+    ensip-1: /docs/ens-improvement-proposals/ensip-1-ens.html
+    ensip-2: /docs/ens-improvement-proposals/ensip-2-initial-hash-registrar.html
+    ensip-3: /docs/ens-improvement-proposals/ensip-3-reverse-resolution.html
+    ensip-4: /docs/ens-improvement-proposals/ensip-4-support-for-contract-abis.html
+    ensip-5: /docs/ens-improvement-proposals/ensip-5-text-records.html
+    ensip-6: /docs/ens-improvement-proposals/ensip-6-dns-in-ens.html
+    ensip-7: /docs/ens-improvement-proposals/ensip-7-contenthash-field.html
+    ensip-8: /docs/ens-improvement-proposals/ensip-8-interface-discovery.html
+    ensip-9: /docs/ens-improvement-proposals/ensip-9-multichain-address-resolution.html
+    ensip-10: /docs/ens-improvement-proposals/ensip-10-wildcard-resolution.html
   dapp-developer-guide:
     ens-enabling-your-dapp: /docs/dapp-developer-guide/ens-enabling-your-dapp.html
     ens-libraries: /docs/dapp-developer-guide/ens-libraries.html

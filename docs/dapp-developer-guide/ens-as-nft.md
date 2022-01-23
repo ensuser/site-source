@@ -55,7 +55,7 @@ request(url, GET_LABEL_NAME).then((data) => console.log(data))
 2. 设置 ENS 注册表地址（主要是在部署注册器时）
 3. 创建 `register` 函数用来调用 `registry.setSubnodeOwner`，然后通过将子域标签哈希转换为 tokenId 来生成 NFT。
 
-```text
+```
 contract DCLRegistrar is ERC721Full, Ownable {
     constructor(
         IENSRegistry _registry,

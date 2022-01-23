@@ -14,7 +14,7 @@ ENS 只使用固定长度的256位加密哈希来代替可读的域名。为了�
 
 使用ENS和处理可读域名的应用程序在进行规范化和验证时必须遵循 [UTS46](http://unicode.org/reports/tr46/) 。处理过程应该通过设置 `UseSTD3ASCIIRules=true` 采用非过渡规则。
 
-[eth-ens-namehash](https://www.npmjs.com/package/eth-ens-namehash) 这一 Javascript 库会执行这里描述的规范化和哈希。DApp 开发者指南中涉及的所有 [ENS 库](../dapp-developer-guide/ens-libraries.html) 都会执行规范化和哈希。
+[eth-ens-namehash](https://www.npmjs.com/package/@ensdomains/eth-ens-namehash) 这个 Javascript 库会执行这里描述的规范化和哈希。DApp 开发者指南中涉及的所有 [ENS 库](../dapp-developer-guide/ens-libraries.html) 都会执行规范化和哈希。
 
 ## 对域名进行哈希
 
