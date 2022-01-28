@@ -1,27 +1,27 @@
 ---
+part: ENS 中文文档
+title: 'ENSIP-5: 文本记录'
 description: A standard for storage of text records in ENS (formerly EIP-634).
 ---
 
-# ENSIP-5: Text Records
-
-| **Author**    | Richard Moore (@ricmoo) |
+| **作者**    | Richard Moore (@ricmoo) |
 | ------------- | ----------------------- |
-| **Status**    | Final                   |
-| **Submitted** | 2017-05-17              |
+| **状态**    | 完结                   |
+| **提交时间** | 2017-05-17              |
 
-### Abstract
+### 摘要
 
 This ENSIP defines a resolver profile for ENS that permits the lookup of arbitrary key-value text data. This allows ENS name holders to associate e-mail addresses, URLs and other informational data with a ENS name.
 
-### Motivation
+### 动机
 
 There is often a desire for human-readable metadata to be associated with otherwise machine-driven data; used for debugging, maintenance, reporting and general information.
 
 In this ENSIP we define a simple resolver profile for ENS that permits ENS names to associate arbitrary key-value text.
 
-### Specification
+### 规范
 
-#### Resolver Profile
+#### 解析器配置
 
 A new resolver interface is defined, consisting of the following method:
 
@@ -39,7 +39,7 @@ The EIP-165 interface ID of this interface is `0x59d1d43c`.
 
 The `text` data may be any arbitrary UTF-8 string. If the key is not present, the empty string must be returned.
 
-#### Global Keys
+#### 通用键
 
 Global Keys must be made up of lowercase letters, numbers and the hyphen (-).
 
@@ -54,7 +54,7 @@ Global Keys must be made up of lowercase letters, numbers and the hyphen (-).
 * **phone** - A phone number as an E.164 string
 * **url** - a website URL
 
-#### Service Keys
+#### 服务键
 
 Service Keys must be made up of a _reverse dot notation_ for a namespace which the service owns, for example, DNS names (e.g. `.com`, `.io`, etc) or ENS name (i.e. `.eth`). Service Keys must contain at least one dot.
 
@@ -76,7 +76,7 @@ This technique also allows for a service owner to specify a hierarchy for their 
 * **com.example.groups.public**
 * **com.example.groups.private**
 
-#### Legacy Keys
+#### 遗留键
 
 The following keys were specified in earlier versions of this ENSIP.
 
@@ -86,20 +86,21 @@ Their use is not likely very wide, but applications attempting maximal compatibi
 * **vnd.peepeth** - a peepeth username (renamced to `com.peepeth`)
 * **vnd.twitter** - a twitter username (renamed to `com.twitter`)
 
-### Rationale
+### 原理
 
-#### Application-specific vs general-purpose record types
+#### 应用程序专用记录类型 vs 通用记录类型
+
 
 Rather than define a large number of specific record types (each for generally human-readable data) such as `url` and `email`, we follow an adapted model of DNS's `TXT` records, which allow for a general keys and values, allowing future extension without adjusting the resolver, while allowing applications to use custom keys for their own purposes.
 
-### Backwards Compatibility
+### 向后兼容性
 
-Not applicable.
+不适用。
 
-### Security Considerations
+### 安全注意事项
 
-None.
+无
 
-### Copyright
+### 版权
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+通过 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) 放弃版权及相关权利。

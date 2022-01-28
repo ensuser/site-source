@@ -9,14 +9,14 @@ title: .eth 永久注册器的控制器
 
 控制器只与明文标签一起工作（例如，“alice” 代表 “alice.eth”）。
 
-为了防止域名抢注，.eth 注册控制器需要对新域名注册（但不需要对续费）执行一个 “承诺-揭示” 的过程。要注册一个域名，用户必须：
+为了防止域名抢注，.eth 注册控制器需要对新域名注册（但不需要对续费）执行一个 “请求-注册” 的过程。要注册一个域名，用户必须：
 
 1. 利用待注册域名和一个秘密值生成一个固定长度的哈希。
 2. 将第 1 步中生成的定长哈希提交给控制器。
 3. 等待至少 1 分钟，但别超过 24 小时。
 4. 将这个域名的注册请求以及来自第 1 步的秘密值一起提交。
 
-这个过程保证了注册不会被抢注，除非攻击者能够审查至少 1 分钟前用户承诺注册域名的交易。
+这个过程保证了注册不会被抢注，除非攻击者能够审查至少 1 分钟前用户请求注册域名的交易。
 
 ## 示例
 
@@ -52,23 +52,23 @@ async function register(name, owner, duration) {
 
 ## 读取操作
 
-### 获取最短承诺时间
+### 获取最短请求时间
 
 ```text
 uint constant public MIN_COMMITMENT_AGE;
 ```
 
-这个公共常量表示承诺的最短时间（以秒为单位），一次承诺只能在它被打包后至少经过这么多秒才能被揭示。
+这个公共常量表示请求的最短时间（以秒为单位），一次请求只能在它被打包后至少经过这么多秒才能正式注册。
 
 DApps 应该获取这个常量，而不是对当前值进行硬编码，因为这个常量可能会在以后的升级中发生变化。
 
-### 获取最长承诺时间
+### 获取最长请求时间
 
 ```text
 uint constant public MAX_COMMITMENT_AGE;
 ```
 
-这个公共常量表示承诺的最长时间（以秒为单位），一个承诺在它被打包后经过这么多秒之后就会失效，不能再用于注册域名。
+这个公共常量表示请求的最长时间（以秒为单位），一个请求在它被打包后经过这么多秒之后就会失效，不能再用于注册域名。
 
 DApps 应该获取这个常量，而不是对当前值进行硬编码，因为这个常量可能会在以后的升级中发生变化。
 
@@ -82,13 +82,13 @@ uint constant public MIN_REGISTRATION_DURATION;
 
 DApps 应该获取这个常量，而不是对当前值进行硬编码，因为这个常量可能会在以后的升级中发生变化。
 
-### 获取承诺时间戳
+### 获取请求时间戳
 
 ```text
 mapping(bytes32=>uint) public commitments;
 ```
 
-`commitments` 存储了从每一份提交的承诺到对应承诺时间戳的映射。在提交注册交易之前，希望验证承诺有效性的调用者应该先检查这个映射。
+`commitments` 存储了从每一份提交的请求到对应请求时间戳的映射。在提交注册交易之前，希望验证请求有效性的调用者应该先检查这个映射。
 
 ### 获取租金价格
 
@@ -118,23 +118,23 @@ function available(string name) public view returns(bool);
 
 调用者**应该**使用这个函数来检查域名是否可以注册，而不要用注册器合约中的 `available` 函数，后者不检查域名的长度。
 
-### 计算承诺哈希
+### 计算请求哈希
 
 ```text
 function makeCommitment(string name, address owner, bytes32 secret) pure public returns(bytes32);
 ```
 
-`makeCommitment` 从域名标签（比如 “myname” ，而不是 “myname.eth”）和秘密值生成并返回一个承诺哈希。
+`makeCommitment` 从域名标签（比如 “myname” ，而不是 “myname.eth”）和秘密值生成并返回一个请求哈希。
 
 ## 写入操作
 
-### 提交承诺
+### 提交请求
 
 ```text
 function commit(bytes32 commitment) public;
 ```
 
-`commit` 用于提交预承诺，这个预承诺调用了 [makeCommitment](controller.html#计算承诺哈希) 生成的承诺哈希。
+`commit` 用于提交预请求，这个预请求调用了 [makeCommitment](controller.html#计算请求哈希) 生成的请求哈希。
 
 ### 注册域名
 
@@ -146,7 +146,7 @@ function register(string name, address owner, uint duration, bytes32 secret) pub
 
 1. `available(name) == true`
 2. `duration >= MIN_REGISTRATION_DURATION`
-3. `secret` 用于判定一个有效的承诺（例如，`commitments[makeCommitment(name, secret)]`）存在，并且在 1 分钟到 24 小时之间
+3. `secret` 用于判定一个有效的请求（例如，`commitments[makeCommitment(name, secret)]`）存在，并且在 1 分钟到 24 小时之间
 4. `msg.value >= rentPrice(name, duration)`
 
 由于租金价格可能会随时间变化，所以建议调用者发送的租金略高于`rentPrice`返回的价格，5-10%的溢价应该就足够了，多余的资金都会返还给调用者。

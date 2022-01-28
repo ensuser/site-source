@@ -1,75 +1,73 @@
 ---
-description: >-
-  A mechanism for storing ABI definitions in ENS, for easy lookup of contract
-  interfaces by callers (formerly EIP-205).
+part: ENS 中文文档
+title: 'ENSIP-4: 合约 ABI 支持'
+description: A mechanism for storing ABI definitions in ENS, for easy lookup of contract interfaces by callers (formerly EIP-205).
 ---
 
-# ENSIP-4: Support for contract ABIs
-
-| **Author**    | Nick Johnson \<nick@ens.domains> |
+| **作者**    | Nick Johnson \<nick@ens.domains> |
 | ------------- | -------------------------------- |
-| **Status**    | Final                            |
-| **Submitted** | 2017-02-06                       |
+| **状态**    | 完结                            |
+| **提交时间** | 2017-02-06                       |
 
-### Abstract
+### 摘要
 
-ABIs are important metadata required for interacting with most contracts. At present, they are typically supplied out-of-band, which adds an additional burden to interacting with contracts, particularly on a one-off basis or where the ABI may be updated over time. The small size of ABIs permits an alternative solution, storing them in ENS, permitting name lookup and ABI discovery via the same process.
+ABI 是与大多数合约交互所需的重要元数据。目前，它们通常是在带外提供的，这给与合约交互增加了额外的负担，特别是在一次性的基础上，或者 ABI 可能会随着时间的推移而更新。由于 ABI 的体积较小，因此可以采用另一种解决方案，即将其存储在 ENS 中，然后通过相同的过程进行名称查找和 ABI 发现。
 
-ABIs are typically quite compact; the largest in-use ABI we could find, that for the DAO, is 9450 bytes uncompressed JSON, 6920 bytes uncompressed CBOR, and 1128 bytes when the JSON form is compressed with zlib. Further gains on CBOR encoding are possible using a CBOR extension that permits eliminating repeated strings, which feature extensively in ABIs. Most ABIs, however, are far shorter than this, consisting of only a few hundred bytes of uncompressed JSON.
+ABI 通常是非常紧凑。对于 DAO，我们能够找到的在用的最大 ABI，是 9450 字节的未压缩 JSON、6920 字节的未压缩 CBOR，以及使用 zlib 压缩 JSON 表单后的1128字节。通过使用允许消除重复字符串的 CBOR 扩展，可以在 CBOR 编码上获得进一步的增益，这在 ABI 中被广泛采用。然而，大多数 ABI 都比这个短得多，只包含几百个字节的未压缩 JSON。
 
-This ENSIP defines a resolver profile for retrieving contract ABIs, as well as encoding standards for storing ABIs for different applications, allowing the user to select between different representations based on their need for compactness and other considerations such as onchain access.
+这个 ENSIP 定义了一个解析器配置文件，用于检索合约 ABI，以及为不同应用程序存储 ABI 的编码标准，允许用户根据他们对紧凑性的需求和其他因素 (如链上访问) 在不同的表示之间进行选择。
 
-### Specification
+### 规范
 
-#### ABI encodings
+#### ABI 编码
 
-In order to allow for different tradeoffs between onchain size and accessibility, several ABI encodings are defined. Each ABI encoding is defined by a unique constant with only a single bit set, allowing for the specification of 256 unique encodings in a single uint.
+为了在链上体积和可访问性之间实现不同的权衡，定义了几种 ABI 编码。每种 ABI 编码由一个唯一的常数定义，它只有一个位集，允许在一个单位中指定 256 个唯一的编码。
 
-The currently recognised encodings are:
+目前承认的编码有:
 
-| ID | Description          |
+| ID | 描述          |
 | -- | -------------------- |
 | 1  | JSON                 |
 | 2  | zlib-compressed JSON |
 | 4  | CBOR                 |
 | 8  | URI                  |
 
-This table may be extended in future through the ENSIP process.
+这个表将来可能会通过 ENSIP 程序进行扩展。
 
-Encoding type 1 specifies plaintext JSON, uncompressed; this is the standard format in which ABIs are typically encoded, but also the bulkiest, and is not easily parseable onchain.
+编码类型 1 表示明文 JSON，未压缩。这是 ABI 通常编码的标准格式，但也是最庞大的，不容易在链上解析。
 
-Encoding type 2 specifies zlib-compressed JSON. This is significantly smaller than uncompressed JSON, and is straightforward to decode offchain. However, it is impracticalfor onchain consumers to use.
+编码类型 2 表示 zlib 压缩的 JSON。这比未压缩的 JSON 要小得多，而且可以直接从链下解码。然而，对于链上用户来说，这是不现实的。
 
-Encoding type 4 is [CBOR](https://cbor.io). CBOR is a binary encoding format that is a superset of JSON, and is both more compact and easier to parse in limited environments such as the EVM. Consumers that support CBOR are strongly encouraged to also support the [stringref extension](http://cbor.schmorp.de/stringref) to CBOR, which provides significant additional reduction in encoded size.
+编码类型 4 表示 [CBOR](https://cbor.io)。CBOR 是一种二进制编码格式，是 JSON 的超集，在 EVM 等有限的环境中更紧凑，也更容易解析。强烈鼓励支持 CBOR 的用户也支持对 CBOR 的 [stringref 扩展](http://cbor.schmorp.de/stringref)，这大大减少了编码大小。
 
-Encoding type 8 indicates that the ABI can be found elsewhere, at the specified URI. This is typically the most compact of the supported forms, but also adds external dependencies for implementers. The specified URI may use any schema, but HTTP, IPFS, and Swarm are expected to be the most common.
+编码类型 8 表示可以通过指定的 URI 找到 ABI。这通常是受支持的表单中最紧凑的，但也为实现者增加了外部依赖。指定的 URI 可以使用任何模式，但 HTTP、IPFS 和 Swarm 应该是最常见的模式。
 
-#### Resolver profile
+#### 解析器配置
 
-A new resolver interface is defined, consisting of the following method:
+定义了一个新的解析器接口，由以下方法组成:
 
 ```
 function ABI(bytes32 node, uint256 contentType) constant returns (uint256, bytes);
 ```
 
-The interface ID of this interface is 0x2203ab56.
+该接口的接口 ID 为 0x2203ab56。
 
-contentType is a bitfield, and is the bitwise OR of all the encoding types the caller will accept. Resolvers that implement this interface must return an ABI encoded using one of the requested formats, or `(0, "")` if they do not have an ABI for this function, or do not support any of the requested formats.
+contentType 是一个位域，是调用者将接受的所有编码类型的位或。实现此接口的解析器必须返回使用所请求格式之一编码的 ABI；如果它们没有此函数的 ABI，或者不支持任何所请求的格式，则返回 `(0, "")`。
 
-The `abi` resolver profile is valid on both forward and reverse records.
+`abi` 解析器配置对于正向和反向解析都有效。
 
-#### ABI lookup process
+#### ABI 查询过程
 
-When attempting to fetch an ABI based on an ENS name, implementers should first attempt an ABI lookup on the name itself. If that lookup returns no results, they should attempt a reverse lookup on the Ethereum address the name resolves to.
+当试图根据 ENS 名称获取 ABI 时，实现者应该首先尝试对名称本身进行 ABI 查找。如果查找没有返回结果，他们应该尝试对该名称解析到的以太坊地址进行反向查找。
 
-Implementers should support as many of the ABI encoding formats as practical.
+实现者应该支持尽可能多的 ABI 编码格式。
 
-### Rationale
+### 原理
 
-Storing ABIs onchain avoids the need to introduce additional dependencies for applications wishing to fetch them, such as swarm or HTTP access. Given the typical compactness of ABIs, we believe this is a worthwhile tradeoff in many cases.
+在链上存储 ABI 使得希望获取它们的应用程序不必再引入额外依赖项，比如 Swarm 或 HTTP 访问。考虑到 ABI 的典型压缩性，我们认为在许多情况下这是一个有价值的折衷。
 
-The two-step resolution process permits different names to provide different ABIs for the same contract, such as in the case where it's useful to provide a minimal ABI to some callers, as well as specifying ABIs for contracts that did not specify one of their own. The fallback to looking up an ABI on the reverse record permits contracts to specify their own canonical ABI, and prevents the need for duplication when multiple names reference the same contract without the need for different ABIs.
+两步解析过程允许不同的名称为相同的合约提供不同的 ABI，例如，向一些调用者提供最小的 ABI 很有用，以及为没有指定自己的合约指定 ABI。在反向记录上查找 ABI 的方法允许合约指定它们自己的规范 ABI，并防止在多个名称引用同一个合约而不需要使用不同的 ABI 时出现重复。
 
-### Copyright
+### 版权
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+通过 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) 放弃版权及相关权利。

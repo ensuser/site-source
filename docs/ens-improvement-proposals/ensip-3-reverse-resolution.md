@@ -1,43 +1,41 @@
 ---
-description: >-
-  Specifies a TLD, registrar, and resolver interface for reverse resolution of
-  Ethereum addresses using ENS (formerly EIP-181).
+part: ENS 中文文档
+title: 'ENSIP-3: 反向解析'
+description: Specifies a TLD, registrar, and resolver interface for reverse resolution of Ethereum addresses using ENS (formerly EIP-181).
 ---
 
-# ENSIP-3: Reverse Resolution
-
-| **Author**    | Nick Johnson \<nick@ens.domains> |
+| **作者**    | Nick Johnson \<nick@ens.domains> |
 | ------------- | -------------------------------- |
-| **Status**    | Final                            |
-| **Submitted** | 2016-12-01                       |
+| **状态**    | 完结                            |
+| **提交时间** | 2016-12-01                       |
 
-## Abstract
+## 摘要
 
-This ENSIP specifies a TLD, registrar, and resolver interface for reverse resolution of Ethereum addresses using ENS. This permits associating a human-readable name with any Ethereum blockchain address. Resolvers can be certain that the reverse record was published by the owner of the Ethereum address in question.
+这个 ENSIP 为 ENS 的反向解析指定 TLD、注册器和解析器接口。它支持将人类可读的名称与任何以太坊区块链地址关联起来。解析器可以确定反向记录是由相关以太坊地址的所有者提交的。
 
-## Motivation
+## 动机
 
-While name services are mostly used for forward resolution - going from human-readable identifiers to machine-readable ones - there are many use-cases in which reverse resolution is useful as well:
+虽然名称服务主要用于正向解析——从人类可读的标识符解析到机器可读的标识符——但在许多情况下，反向解析也很有用:
 
-* Applications that allow users to monitor accounts benefit from showing the name of an account instead of its address, even if it was originally added by address.
-* Attaching metadata such as descriptive information to an address allows retrieving this information regardless of how the address was originally discovered.
-* Anyone can configure a name to resolve to an address, regardless of ownership of that address. Reverse records allow the owner of an address to claim a name as authoritative for that address.
+* 在某些应用程序中，用户需要关注自己的账户，那么在应用程序中显示名称会比显示地址更合理，即便这个名称最初是通过地址添加的。
+* 通过将元数据（比如描述信息等）关联到一个地址来允许信息读取，而不必关心最初如何找到这个地址。
+* 人们不需要取得某个地址的所有权，就可以将名称解析到这个地址。反向记录允许地址的所有者声明一个名称作为该地址的专用名称。
 
-## Specification
+## 规范
 
-Reverse ENS records are stored in the ENS hierarchy in the same fashion as regular records, under a reserved domain, `addr.reverse`. To generate the ENS name for a given account's reverse records, convert the account to hexadecimal representation in lower-case, and append `addr.reverse`. For instance, the ENS registry's address at `0x112234455c3a32fd11230c42e7bccd4a84e02010` has any reverse records stored at `112234455c3a32fd11230c42e7bccd4a84e02010.addr.reverse`.
+反向 ENS 记录与正向记录以相同的方式存储在 ENS 层次结构中，在保留域 `addr.reverse` 之下。要为给定帐户的反向记录生成 ENS 名称，请将帐户转换为小写的十六进制表示，并附加 `addr.reverse`。例如，ENS 注册表地址 "0x112234455c3a32fd11230c42e7bccd4a84e02010" 有反向记录存储在 `112234455c3a32fd11230c42e7bccd4a84e02010.addr.reverse`。
 
-Note that this means that contracts wanting to do dynamic reverse resolution of addresses will need to perform hex encoding in the contract.
+请注意，这意味着想要对地址进行动态反向解析的合约需要在合约中执行十六进制编码。
 
-### Registrar
+### 注册器
 
-The owner of the `addr.reverse` domain will be a registrar that permits the caller to take ownership of the reverse record for their own address. It provides the following methods:
+`addr.reverse` 域的所有者是一个注册器，它允许调用者为自己的地址取得反向记录的所有权。提供如下方法:
 
 #### function claim(address owner) returns (bytes32 node)
 
-When called by account `x`, instructs the ENS registry to transfer ownership of the name `hex(x) + '.addr.reverse'` to the provided address, and return the namehash of the ENS record thus transferred.
+当被账户 `x` 调用时，会通知 ENS 注册表将 `hex(x) + '.addr.reverse'` 的所有权转移至给定的地址，并返回本次转移的 ENS 记录的 namehash。
 
-Allowing the caller to specify an owner other than themselves for the relevant node facilitates contracts that need accurate reverse ENS entries delegating this to their creators with a minimum of code inside their constructor:
+允许调用者为相关节点指定除自己以外的所有者，这有助于需要精确反向 ENS 记录的合约，并在构造函数中以最少的代码将此委托给合约的创建者。
 
 ```
 reverseRegistrar.claim(msg.sender)
@@ -45,29 +43,29 @@ reverseRegistrar.claim(msg.sender)
 
 #### function claimWithResolver(address owner, address resolver) returns (bytes32 node)
 
-When called by account `x`, instructs the ENS registry to set the resolver of the name `hex(x) + '.addr.reverse'` to the specified resolver, then transfer ownership of the name to the provided address, and return the namehash of the ENS record thus transferred. This method facilitates setting up a custom resolver and owner in fewer transactions than would be required if calling `claim`.
+当被账户 `x` 调用时，通知 ENS 注册表为 `hex(x) + '.addr.reverse'` 设置指定的解析器，然后将名称的所有权转移到提供的地址，并返回本次转移的 ENS 记录的 namehash。这个方法便于设置一个自定义的解析器和所有者，同时要比直接调用 `claim` 需要更少的交易次数。
 
 #### function setName(string name) returns (bytes32 node)
 
-When called by account `x`, sets the resolver for the name `hex(x) + '.addr.reverse'` to a default resolver, and sets the name record on that name to the specified name. This method facilitates setting up simple reverse records for users in a single transaction.
+当被账户 `x` 调用时，为 `hex(x) + '.addr.reverse'` 这一名设置一个默认解析器，并将名称记录设置为指定名称。这个方法便于用户在单个交易中完成反向记录设置。
 
-### Resolver interface
+### 解析器接口
 
-A new resolver interface is defined, consisting of the following method:
+定义了一个新的解析器接口，由以下方法组成:
 
 ```
 function name(bytes32 node) constant returns (string);
 ```
 
-Resolvers that implement this interface must return a valid ENS name for the requested node, or the empty string if no name is defined for the requested node.
+实现此接口的解析器必须为请求的节点返回一个有效的 ENS 名称，如果没有为请求的节点定义名称，则返回空字符串。
 
-The interface ID of this interface is 0x691f3431.
+该接口的 ID 为 0x691f3431。
 
-Future ENSIPs may specify more record types appropriate to reverse ENS records.
+未来的 ENSIP 可能会指定晚多适合反向 ENS 记录的类型。
 
-## Appendix 1: Registrar implementation
+## 附录 1: 注册器的实现
 
-This registrar, written in Solidity, implements the specifications outlined above.
+这个注册器是用 Solidity 编写的，实现了上文描述的规范。
 
 ```
 pragma solidity ^0.4.10;
@@ -218,6 +216,6 @@ contract ReverseRegistrar {
 }
 ```
 
-### Copyright
+### 版权
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+通过 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) 放弃版权及相关权利。
