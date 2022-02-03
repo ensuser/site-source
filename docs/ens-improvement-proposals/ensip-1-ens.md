@@ -29,7 +29,7 @@ description: Documentation of the basic ENS protocol (formerly EIP-137).
 
 * 支持子名称/子域名，如 live.mysite.tld 和 forum.mysite.tld
 * 单一名称下的多个服务，如托管在 Swarm 的 DApp、Whisper 地址和邮件服务器。
-* 支持 DNS 记录类型，允许区块链托管的“遗留”名称。这将允许 Ethereum 客户端（如 Mist）从区块链名称解析至传统网站地址或电子邮件服务器。
+* 支持 DNS 记录类型，允许区块链托管的“传统”名称。这将允许 Ethereum 客户端（如 Mist）从区块链名称解析至传统网站地址或电子邮件服务器。
 * DNS 网关，通过 DNS 对接 ENS 域名，为传统客户端解析和连接到区块链服务提供更便利的方法。
 
 特别是前两个用例，在当今的互联网 DNS 下随处可见，我们相信它们是名称服务的基本特性，随着以太坊平台的发展和成熟，它们将继续发挥作用。
