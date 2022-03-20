@@ -6,7 +6,7 @@ description: 默认的公共解析器。
 
 [源代码](https://github.com/ensdomains/resolvers/blob/master/contracts/PublicResolver.sol)
 
-公共解析器是一个通用的 ENS 解析器，它适用于大多数标准的 ENS 用例。域名的所有者可以使用公共解析器更新相应的 ENS 记录。
+公共解析器是一个通用的 ENS 解析器，它适用于大多数标准的 ENS 用例。名称的所有者可以使用公共解析器更新相应的 ENS 记录。
 
 公共解析器遵循以下 EIP 提案:
 
@@ -19,7 +19,7 @@ description: 默认的公共解析器。
 * [EIP1577](https://eips.ethereum.org/EIPS/eip-1577) - Content hash support \( `contenthash()` \).
 
 {% note warn %}
-虽然公共解析器是一个方便的默认解析器，但仍然存在许多其他的解析器实例和版本。调用者**不能**假设域名使用的是公共解析器的最新版本，或是解析器包含了这里描述的所有方法。要检查一个解析器是否支持某个特性，请参见 [接口检查支持](publicresolver.html#接口检查支持) 。
+虽然公共解析器是一个方便的默认解析器，但仍然存在许多其他的解析器实例和版本。调用者**不能**假设名称使用的是公共解析器的最新版本，或是解析器包含了这里描述的所有方法。要检查一个解析器是否支持某个特性，请参见 [接口检查支持](publicresolver.html#接口检查支持) 。
 {% endnote %}
 
 ## 接口检查支持
@@ -104,25 +104,25 @@ function setAddr(bytes32 node, uint coinType, bytes calldata addr) external;
 event AddressChanged(bytes32 indexed node, uint coinType, bytes newAddress);
 ```
 
-## 获取规范域名
+## 获取规范名称
 
 ```text
 function name(bytes32 node) external view returns (string memory);
 ```
 
-返回与给定的 `node` 关联的规范 ENS 域名，专门用于反向解析。
+返回与给定的 `node` 关联的规范 ENS 名称，专门用于反向解析。
 
 这个函数的接口 ID 为 _0x691f3431_ 。
 
 这个函数的详细信息请参阅 [EIP181](https://eips.ethereum.org/EIPS/eip-181) 。
 
-## 设置规范域名
+## 设置规范名称
 
 ```text
 function setName(bytes32 node, string calldata name) external;
 ```
 
-为给定的 `node` 设置规范 ENS 域名 `name` 。
+为给定的 `node` 设置规范 ENS 名称 `name` 。
 
 只能由 `node` 的所有者调用。
 
@@ -140,7 +140,7 @@ function contenthash(bytes32 node) external view returns (bytes memory);
 
 返回 `node` 的内容哈希（如果存在的话）。涉及的值会被格式化为机器可读的 [multicodecs](https://github.com/multiformats/multicodec) ，详细信息请参阅 [EIP1577](https://eips.ethereum.org/EIPS/eip-1577) 。
 
-`contenthash` 用于存储 IPFS 和 Swarm 内容哈希，可以将 ENS 域名解析到托管在这些分布式网络上的内容（如网站）。
+`contenthash` 用于存储 IPFS 和 Swarm 内容哈希，可以将 ENS 名称解析到托管在这些分布式网络上的内容（如网站）。
 
 这个函数的接口 ID 为 _0xbc1c58d1_ 。
 
@@ -191,7 +191,7 @@ ABI(bytes32 node, uint256 contentTypes) external view returns (uint256, bytes me
 function setABI(bytes32 node, uint256 contentType, bytes calldata data) external
 ```
 
-为 `node` 设置或更新 ABI 数据。`contentType` 是给定的内容类型 ID ，而且必须给定一个类型 ID ；`data` 包含经过编码的 ABI 数据。如果要清除域名的 ABI 数据，请将 `data` 设置为空字符串。
+为 `node` 设置或更新 ABI 数据。`contentType` 是给定的内容类型 ID ，而且必须给定一个类型 ID ；`data` 包含经过编码的 ABI 数据。如果要清除名称的 ABI 数据，请将 `data` 设置为空字符串。
 
 只能由 `node` 的所有者调用。
 
@@ -235,7 +235,7 @@ event PubkeyChanged(bytes32 indexed node, bytes32 x, bytes32 y);
 function text(bytes32 node, string calldata key) external view returns (string memory)
 ```
 
-检索 `node` 的文本元数据。每个域名可能有多个元数据片段，每个片段由一个唯一的键值 `key` 标识。如果 `node` 中由键值 `key` 标识的文本数据不存在，则返回空字符串。
+检索 `node` 的文本元数据。每个名称可能有多个元数据片段，每个片段由一个唯一的键值 `key` 标识。如果 `node` 中由键值 `key` 标识的文本数据不存在，则返回空字符串。
 
 `key` 可选的标准值有：
 
@@ -244,8 +244,8 @@ function text(bytes32 node, string calldata key) external view returns (string m
 | email | 电子邮箱地址 |
 | url | 网址（URL） |
 | avatar | 用作头像或标识的图像的网址 |
-| description | 域名的描述信息 |
-| notice | 关于域名的通知 |
+| description | 名称的描述信息 |
+| notice | 关于名称的通知 |
 | keywords | 逗号分隔的关键字列表，按重要性由高到低排列，与此字段有交互的客户端可以通过设置一个阈值来选择忽略哪些内容 |
 
 此外，任何人都可以指定特定于服务提供商的键值，这些键值必须以 `com.` 作为前缀。目前已知的特定于服务提供商的键值如下:

@@ -1,65 +1,64 @@
 ---
-description: >-
-  Defines a method of associating contract interfaces with ENS names and
-  addresses, and of discovering those interfaces (formerly EIP-1844).
+part: ENS 中文文档
+subpart: ensip
+title: 'ENSIP-8: 接口发现'
+description: 定义一种将合约接口与 ENS 名称和地址关联起来的方法，以及发现这些接口的方法 (原来的 EIP-1844)。
 ---
 
-# ENSIP-8: Interface Discovery
+| **作者**    | Nick Johnson \<nick@ens.domains> |
+| ------------- | -------- |
+| **状态**    | 完结      |
+| **提交时间** | 2019-03-05   |
 
-| **Author**    | Nick Johnson \<nick@ens.domains> |
-| ------------- | -------------------------------- |
-| **Status**    | Final                            |
-| **Submitted** | 2019-03-05                       |
+### 摘要
 
-### Abstract
+这个 ENSIP 指定了一种方法，用于公开与 ENS 名称或地址 (通常是合约地址) 相关联的接口，还允许应用程序发现这些接口并与之交互。接口既可以由目标合约 (如果有的话) 实现，也可以由任何其他合约实现。
 
-This ENSIP specifies a method for exposing interfaces associated with an ENS name or an address (typically a contract address) and allowing applications to discover those interfaces and interact with them. Interfaces can be implemented either by the target contract (if any) or by any other contract.
+### 动机
 
-### Motivation
+EIP-165 支持接口发现——确定给定地址的合约是否支持所请求的接口。然而，在许多情况下，能够发现与其他合约实现的名称或地址相关联的功能是很有用的。
 
-EIP 165 supports interface discovery - determining if the contract at a given address supports a requested interface. However, in many cases it's useful to be able to discover functionality associated with a name or an address that is implemented by other contracts.
+例如，代币合约本身可能不提供任何类型的“原子交换”功能，但可能有相关的合约提供。通过 ENS 接口发现，代币合约可以公开该元数据，通知应用程序在哪里可以找到该功能。
 
-For example, a token contract may not itself provide any kind of 'atomic swap' functionality, but there may be associated contracts that do. With ENS interface discovery, the token contract can expose this metadata, informing applications where they can find that functionality.
+### 规范
 
-### Specification
-
-A new profile for ENS resolvers is defined, consisting of the following method:
+定义了 ENS 解析器的新解析类型，包括以下方法:
 
 ```solidity
 function interfaceImplementer(bytes32 node, bytes4 interfaceID) external view returns (address);
 ```
 
-The EIP-165 interface ID of this interface is `0xb8f2bbb4`.
+该接口在 EIP-165 标准下的接口 ID 是 `0xb8f2bbb4`.
 
-Given an ENS name hash `node` and an EIP-165 `interfaceID`, this function returns the address of an appropriate implementer of that interface. If there is no interface matching that interface ID for that node, 0 is returned.
+给定 ENS 名称的 namehash 值 `node` 和 EIP-165 `interfaceID`，此函数返回该接口的实现者的地址。如果没有与该节点的接口 ID 匹配的接口，则返回 0。
 
-The address returned by `interfaceImplementer` MUST refer to a smart contract.
+`interfaceImplementer` 返回的地址必须指向一个智能合约。
 
-The smart contract at the returned address SHOULD implement EIP-165.
+返回地址的智能合约应该实现 EIP-165。
 
-Resolvers implementing this interface MAY utilise a fallback strategy: If no matching interface was explicitly provided by the user, query the contract returned by `addr()`, returning its address if the requested interface is supported by that contract, and 0 otherwise. If they do this, they MUST ensure they return 0, rather than reverting, if the target contract reverts.
+实现此接口的解析器可以使用一种回退策略: 如果用户没有显式提供匹配的接口，则查询 `addr()` 返回的合约，如果请求的接口被该合约支持，则返回其地址，否则为 0。如果这样做，则必须确保在目标合约恢复时返回 0，而不是恢复。
 
-This field may be used with both forward resolution and reverse resolution.
+此字段可用于正向解析和反向解析。
 
-### Rationale
+### 原理
 
-A naive approach to this problem would involve adding this method directly to the target contract. However, doing this has several shortcomings:
+解决这个问题的一种简单方法是将此方法直接添加到目标合约中。然而，这样做有几个缺点:
 
-1. Each contract must maintain its own list of interface implementations.
-2. Modifying this list requires access controls, which the contract may not have previously required.
-3. Support for this must be designed in when the contract is written, and cannot be retrofitted afterwards.
-4. Only one canonical list of interfaces can be supported.
+1. 每个合约必须维护自己的接口实现列表。
+2. 修改此列表需要访问控制，而合约以前可能不需要访问控制。
+3. 这项支持必须在合约起草时就设计好，并且不能在合约起草后再进行修改。
+4. 只支持一个规范的接口列表。
 
-Using ENS resolvers instead mitigates these shortcomings, making it possible for anyone to associate interfaces with a name, even for contracts not previously built with this in mind.
+而使用 ENS 解析器可以弱化这些缺点，使任何人都可以将接口与名称关联起来，即使是以前没有考虑到这一点的合约。
 
-### Backwards Compatibility
+### 向后兼容性
 
-There are no backwards compatibility issues.
+不存在向后兼容性问题
 
-### Implementation
+### 实现
 
-The PublicResolver in the [ensdomains/resolvers](https://github.com/ensdomains/resolvers/) repository implements this interface.
+[ensdomains/resolvers](https://github.com/ensdomains/resolvers/) 中的公共解析器代码仓库实现了这个接口。
 
-### Copyright
+### 版权
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+通过 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) 放弃版权及相关权利。

@@ -9,24 +9,24 @@ title: DNS Registrar
 
 Given that key, we can now verify any record that is signed with that key, so in this case, it’s the hash of the root of the xyz top level domain. Given that, we can recognize the key, and so on and so forth. -->
 
-DNSSEC（域名系统安全扩展）建立了一个信任链，从 ICANN 签名的根密钥（.）向下至每个密钥。我们首先知道 DNS 根密钥的哈希值（这是在 oracle 智能合约中硬编码的）。有了该密钥的哈希值，就可以传入实际的密钥，验证它是否与此哈希值匹配，验证后我们可以将它添加到可信记录集。
+DNSSEC（名称系统安全扩展）建立了一个信任链，从 ICANN 签名的根密钥（.）向下至每个密钥。我们首先知道 DNS 根密钥的哈希值（这是在 oracle 智能合约中硬编码的）。有了该密钥的哈希值，就可以传入实际的密钥，验证它是否与此哈希值匹配，验证后我们可以将它添加到可信记录集。
 
 有了该密钥，我们现在可以验证任何用该密钥签名的记录，在本例中，它是 xyz 顶级域的根哈希值。这样，我们就能识别密钥，等等。
 
 ![](/images/docs/dnsprovejs-diagram.png)
 
-任何人都可以在以太坊区块链上向 DNSSEC oracle 提交经过 DNSSEC 签名的 DNS 记录的证明，只要是采用当前支持的公钥方案和摘要签名的就行。如果一个人能够通过 DNSSEC Oracle 证明他拥有某个 DNS 域名的所有权，那么 DNSRegistrar 会将相应的 ENS 域名分配给他。
+任何人都可以在以太坊区块链上向 DNSSEC oracle 提交经过 DNSSEC 签名的 DNS 记录的证明，只要是采用当前支持的公钥方案和摘要签名的就行。如果一个人能够通过 DNSSEC Oracle 证明他拥有某个 DNS 域名的所有权，那么 DNSRegistrar 会将相应的 ENS 名称分配给他。
 
 ## DNSRegistrar 的地址
 
 - Mainnet: 待定
 - Ropsten: 0x475e527d54b91b0b011DA573C69Ac54B2eC269ea
 
-注册 ENS 域名时，可以通过查找其上级域名所有者（例如 `.matoken.eth` 的上级域名是 `.eth`）来查找注册器合约地址。但是，当您通过DNSSEC 注册器进行注册时，如果您是在该 TLD下 第一个注册的，那么父域名可能不存在。
+注册 ENS 名称时，可以通过查找其上级名称所有者（例如 `.matoken.eth` 的上级名称是 `.eth`）来查找注册器合约地址。但是，当您通过DNSSEC 注册器进行注册时，如果您是在该 TLD下 第一个注册的，那么父名称可能不存在。
 
 ## Gas 消耗
 
-向 DNSSEC Oracle 提交证明涉及复杂的计算过程，因此会消耗大量 Gas。如果你是在某个 TLD 下第一个提交域名的，还会消耗更多的 Gas，因为它在同时提交您的域名及其父域名这两项证明（例如：`matoken.live` 与 `.live`）。在 Ropsten 网络上进行测试时，[此过程消耗了 1,663,953 gas](https://ropsten.etherscan.io/tx/0x7ba91728530b2a9f325b330986265fd455639fd3f07e775cf68ee8c767b2637f)。
+向 DNSSEC Oracle 提交证明涉及复杂的计算过程，因此会消耗大量 Gas。如果你是在某个 TLD 下第一个提交名称的，还会消耗更多的 Gas，因为它在同时提交您的名称及其父名称这两项证明（例如：`matoken.live` 与 `.live`）。在 Ropsten 网络上进行测试时，[此过程消耗了 1,663,953 gas](https://ropsten.etherscan.io/tx/0x7ba91728530b2a9f325b330986265fd455639fd3f07e775cf68ee8c767b2637f)。
 
 ## Typescript/Javascript 库
 

@@ -30,9 +30,9 @@ ENS 是通过部署在以太坊上的一系列智能合约实现的，要深入�
 | 11 | [0x91114](https://cn.etherscan.com/address/0x911143d946ba5d467bfc476491fdb235fef4d667) | Multisig | 多重签名 |
 | 12 | [0x0904d](https://cn.etherscan.com/address/0x0904dac3347ea47d208f3fd67402d039a3b99859) | Wallet | 官方钱包 |
 | 13 | [0xb6e04](https://cn.etherscan.com/address/0xb6e040c9ecaae172a89bd561c5f73e1c48d28cd9) | Wallet 2 | 官方钱包 2 |
-| 14 | [0xc3265](https://cn.etherscan.com/address/0xc32659651d137a18b79925449722855aa327231d) | Subdomain Registrar | 子域名注册器 |
-| 15 | [0xe65d8](https://cn.etherscan.com/address/0xe65d8aaf34cb91087d1598e0a15b582f57f217d9) | Migration Subdomain Registrar | 迁移子域名注册器 |
-| 16 | [0xf7c83](https://cn.etherscan.com/address/0xf7c83bd0c50e7a72b55a39fe0dabf5e3a330d749) | Short Name Claims | 短域名声明 |
+| 14 | [0xc3265](https://cn.etherscan.com/address/0xc32659651d137a18b79925449722855aa327231d) | Subdomain Registrar | 子名称注册器 |
+| 15 | [0xe65d8](https://cn.etherscan.com/address/0xe65d8aaf34cb91087d1598e0a15b582f57f217d9) | Migration Subdomain Registrar | 迁移子名称注册器 |
+| 16 | [0xf7c83](https://cn.etherscan.com/address/0xf7c83bd0c50e7a72b55a39fe0dabf5e3a330d749) | Short Name Claims | 短名称声明 |
 | 17 | [0xb9d37](https://cn.etherscan.com/address/0xb9d374d0fe3d8341155663fae31b7beae0ae233a) | Stable Price Oracle | 稳定价格预言机 |
 | 18 | [0xff252](https://cn.etherscan.com/address/0xff252725f6122a92551a5fa9a6b6bf10eb0be035) | Bulk Renewal | 批量续费 |
 | 19 | [0xa2f42](https://cn.etherscan.com/address/0xa2f428617a523837d4adc81c67a296d42fd95e86) | DNS Registrar | DNS 注册器 |

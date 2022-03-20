@@ -1,6 +1,6 @@
 ---
 part: ENS 主要合约
-title: .ETH 注册器合约 - ENS 原生域名 .eth 的核心合约
+title: .ETH 注册器合约 - ENS 原生名称 .eth 的核心合约
 ---
 
 
@@ -12,7 +12,7 @@ May-27-2021 11:14:35 PM +UTC
 锁死的过程是这样的：
 
 1. 7 个密钥管理者中的一个利用作为根域合约管理员的多重签名合约（[Gnosis Safe 代理合约](https://cn.etherscan.com/address/0xcf60916b6cb4753f58533808fa610fcbd4098ec0)）发起[一笔交易](https://cn.etherscan.com/tx/0x636abee238e85eedd8dc3b5e4584ace2e00452e65fca1631f36cf5c4a96bcacc)，去调用[根域合约](/contracts/root.html)的 `lock` 函数。
-2. 函数调用时传入 `eth` 的 nodehash，旨在将 `.eth` 这一顶级域名的管理员合约在当前的 Root 合约内锁死。
+2. 函数调用时传入 `eth` 的 nodehash，旨在将 `.eth` 这一顶级名称的管理员合约在当前的 Root 合约内锁死。
 3. 另外的 6 个密钥管理者针对这笔交易进行签名，当签名总数达到 4 个时，成功调用 lock 函数实现 “锁死”。
 
 不过这是 PRETEND TO 锁死。

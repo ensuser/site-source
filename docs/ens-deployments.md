@@ -7,19 +7,19 @@ title: ENS 部署情况
 
 ENS 注册表的部署地址是：`0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e` 。这个部署地址在以太坊[主网络](https://cn.etherscan.com/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e)、[Ropsten](https://ropsten.etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e)、[Rinkeby](https://rinkeby.etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e)、[Goerli](https://goerli.etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e)  测试网络中都是一样的。
 
-主网上部署了以下几个顶级域名的注册器：
+主网上部署了以下几个顶级名称的注册器：
 
 * .eth ，使用 .eth 永久注册器。
 * .xyz ，通过与 DNS 集成的方式来进行注册。
 * .luxe ，通过 [自定义集成](http://join.luxe/) 的方式，允许拥有 .luxe 这一 DNS 域名的人使用 ENS。
-* .kred ，通过 [自定义集成](http://domains.kred/) 的方式，根据 DNS 的情况自动地同步和更新 `.kred` ENS 域名。
+* .kred ，通过 [自定义集成](http://domains.kred/) 的方式，根据 DNS 的情况自动地同步和更新 `.kred` ENS 名称。
 * .art ，通过自定义集成的方式实现。
 
-顶级域名（TLD）的合约地址，可以通过查询这个 TLD 的“管理员”地址来找到（比如，在 [https://app.ens.domains/name/xyz](https://app.ens.domains/name/xyz) 可以找到 `.xyz` 的合约地址）。
+顶级名称（TLD）的合约地址，可以通过查询这个 TLD 的“管理员”地址来找到（比如，在 [https://app.ens.domains/name/xyz](https://app.ens.domains/name/xyz) 可以找到 `.xyz` 的合约地址）。
 
 ![](/images/docs/ens_deployments_01.png)
 
-Ropsten 测试网络上部署了 .test 注册器，每个人都可以注册 .test 域名用作测试， .test 域名的有效期是28天。
+Ropsten 测试网络上部署了 .test 注册器，每个人都可以注册 .test 名称用作测试， .test 名称的有效期是28天。
 
 此外，Ropsten 测试网络还部署了 .eth 注册器用于测试。
 

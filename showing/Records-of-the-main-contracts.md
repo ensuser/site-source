@@ -104,7 +104,7 @@ MethodID: 0xc6427474
 4. `label` 参数的值为：`dec08...f7b3` ，这是 `reverse` 的哈希
 5. `new-owner` 参数的值为：`91114...d667`
 
-从以上信息中，可以判断出来，该交易执行的是将顶级域名 `.reverse` 的所有者设置为 `0x91114...d667`（即 Multisig 多签合约）。
+从以上信息中，可以判断出来，该交易执行的是将顶级名称 `.reverse` 的所有者设置为 `0x91114...d667`（即 Multisig 多签合约）。
 
 ### MultiSig 合约的 7 个所有者账户
 
@@ -118,15 +118,15 @@ MethodID: 0xc6427474
 | 6 | 0xec186 | [0xec186](https://cn.etherscan.com/address/0xec1867e2597b1499e34210cd0cc086924f0d0ebe) | |
 | 7 | [0x5c359](https://cn.etherscan.com/address/0x5c35939706c8b4c8d8f95801a9c903de9a2af937) | [0x3ac6c](https://cn.etherscan.com/address/0x3ac6cb2ccfd8c8aae3ba31d7ed44c20d241b16a4) | 变更于 MultiSig 合约的 5# 交易|
 
-## ENS 根域及顶级域名相关信息
+## ENS 根域及顶级名称相关信息
 
-| No. | 域名 | labelhash | node | 所有者 | 备注 |
+| No. | 名称 | labelhash | node | 所有者 | 备注 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | （根域） | 无 | [0x00000000](#0x0000000000000000000000000000000000000000000000000000000000000000) | [Root-0x28508](https://cn.etherscan.com/address/0x285088c75a8508664ad77df63e2d60a408e5284a#code) | ENS 根域 |
-| 2 | .eth | [0x4f5b8127](#0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0) | [0x93cdeb70](#0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae) | [BaseRegImp-0xfac7b](https://cn.etherscan.com/address/0xfac7bea255a6990f749363002136af6556b31e04#code) | 以太坊原生顶级域名 |
-| 3 | .reverse | [0xdec08c9d](#0xdec08c9dbbdd0890e300eb5062089b2d4b1c40e3673bbccb5423f7b37dcf9a9c) | [0xa097f672](#0xa097f6721ce401e757d1223a763fef49b8b5f90bb18567ddb86fd205dff71d34) | [MultiSig-0x91114](https://cn.etherscan.com/address/0x911143d946ba5d467bfc476491fdb235fef4d667#code) | 反向解析顶级域名 |
-| 4 | .addr.reverse | [0xe5e14487](#0xe5e14487b78f85faa6e1808e89246cf57dd34831548ff2e6097380d98db2504a) | [0x91d17777](#0x91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2) | [ReverseRegistrar-0x9062c](https://cn.etherscan.com/address/0x9062c0a6dbd6108336bcbe4593a3d1ce05512069#code) | 用于设置反向解析的二级域名 |
-| 5 | .xyz | [0x9dd2c369](#0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49) | [0xa87a11c7](#0xa87a11c7f15e38a7398517fda2ae1b40d870aa24b34b4b09aa09afc71f2c9d26) | [DNSRegistrar-0xf7004](https://cn.etherscan.com/address/0xf7004095d2d81fe3b5937241c106aace6d6e8e4a#code) | 从 DNS 接入的顶级域名 |
+| 2 | .eth | [0x4f5b8127](#0x4f5b812789fc606be1b3b16908db13fc7a9adf7ca72641f84d75b47069d3d7f0) | [0x93cdeb70](#0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae) | [BaseRegImp-0xfac7b](https://cn.etherscan.com/address/0xfac7bea255a6990f749363002136af6556b31e04#code) | 以太坊原生顶级名称 |
+| 3 | .reverse | [0xdec08c9d](#0xdec08c9dbbdd0890e300eb5062089b2d4b1c40e3673bbccb5423f7b37dcf9a9c) | [0xa097f672](#0xa097f6721ce401e757d1223a763fef49b8b5f90bb18567ddb86fd205dff71d34) | [MultiSig-0x91114](https://cn.etherscan.com/address/0x911143d946ba5d467bfc476491fdb235fef4d667#code) | 反向解析顶级名称 |
+| 4 | .addr.reverse | [0xe5e14487](#0xe5e14487b78f85faa6e1808e89246cf57dd34831548ff2e6097380d98db2504a) | [0x91d17777](#0x91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2) | [ReverseRegistrar-0x9062c](https://cn.etherscan.com/address/0x9062c0a6dbd6108336bcbe4593a3d1ce05512069#code) | 用于设置反向解析的二级名称 |
+| 5 | .xyz | [0x9dd2c369](#0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49) | [0xa87a11c7](#0xa87a11c7f15e38a7398517fda2ae1b40d870aa24b34b4b09aa09afc71f2c9d26) | [DNSRegistrar-0xf7004](https://cn.etherscan.com/address/0xf7004095d2d81fe3b5937241c106aace6d6e8e4a#code) | 从 DNS 接入的顶级名称 |
 | 6 | .luxe | [0xee84dffa](#0xee84dffab1ae8677065fb36c735dc6a4e040f53be90836b5a5743b6bd981273c) | [0xb6168d4e](#0xb6168d4e6a16769316251939e18834097d5b028bd14398823528e541ac0caa3a) | [OwnedRegistrar-0xa86ba](https://cn.etherscan.com/address/0xa86ba3b6d83139a49b649c05dbb69e0726db69cf#code) | |
 | 7 | .kred | [0xe528c3cd](#0xe528c3cd6fdd088c4790dd1fb1db9962d86b4fc900da22c5f459f606ab5bfad2) | [0x4f2e511b](#0x4f2e511b8dd5304e6d9c043002a10e8366c6257f17356787c009cc68e04b78e3) | [0x56ca9](https://cn.etherscan.com/address/0x56ca9514363f68d622931dce1566070f86ce5550) | |
 | 8 | .club | [0xe1e1884f](#0xe1e1884f7473923c2fed5da5f5489310ba525a82307b50b511b8963ee9b20113) | [0xd5355203](#0xd53552031df0ddd8f71f29c82a1b2774cca7622b89fe6e927aff0c0ca902f16b) | [0x1eb4b](https://cn.etherscan.com/address/0x1eb4b8506fca65e6b229e346dfbfd349956a66e3) | |

@@ -1,13 +1,13 @@
 ---
 part: ENS 使用教程
-title: ENS 域名注册、使用及管理教程 - 概述
-keywords: ENS如何使用, 域名注册, ENS管理, ENS域名使用, 教程
-description: 只要是ENS用户，都需要进行ENS注册与管理，本教程对注册与管理中的一些主要操作进行了详细的说明，告诉你如何使用ENS域名。
+title: ENS 名称注册、使用及管理教程 - 概述
+keywords: ENS如何使用, 名称注册, ENS管理, ENS名称使用, 教程
+description: 只要是ENS用户，都需要进行ENS注册与管理，本教程对注册与管理中的一些主要操作进行了详细的说明，告诉你如何使用ENS名称。
 ---
 
 ## ENS 介绍
 
-以太坊域名服务（Ethereum Name Service）是一个基于以太坊区块链的分布式、开放和可扩展的命名系统。通俗地说，ENS 就是区块链中的域名系统。ENS 域名让人们没有必要再复制或输入冗长的区块链地址。
+以太坊名称服务（Ethereum Name Service）是一个基于以太坊区块链的分布式、开放和可扩展的命名系统。通俗地说，ENS 就是区块链中的名称系统。ENS 名称让人们没有必要再复制或输入冗长的区块链地址。
 
 <div class="special-wrapper">
     <a class="big-button" href="/about/about-ens.html">了解更多</a>
@@ -17,12 +17,12 @@ description: 只要是ENS用户，都需要进行ENS注册与管理，本教程�
 
 只要是 ENS 用户，都需要进行 ENS 注册与管理，本教程对注册与管理中的操作进行了详细的说明，主要分为以下几类。
 
-- **ENS 域名注册**：介绍并演示如何 [注册 .eth 域名](register.html)。
-- **ENS 域名管理**：介绍 ENS 域名的一些基本功能及其操作步骤，主要面向有个性化设置需求的用户。内容有包括 [设置解析器](setresolver.html#设置解析器)、[设置解析记录](setresolver.html#设置解析记录)、[设置反向解析](setreverse.html)、[域名续费](renew.html)、[更换域名管理员](setcontroller.html)、[域名过户](transfer.html)、[设置多种解析记录](setcontent.html)、[子域名管理](setsubdomain.html) 等。
+- **ENS 名称注册**：介绍并演示如何 [注册 .eth 名称](register.html)。
+- **ENS 名称管理**：介绍 ENS 名称的一些基本功能及其操作步骤，主要面向有个性化设置需求的用户。内容有包括 [设置解析器](setresolver.html#设置解析器)、[设置解析记录](setresolver.html#设置解析记录)、[设置反向解析](setreverse.html)、[名称续费](renew.html)、[更换名称管理员](setcontroller.html)、[名称过户](transfer.html)、[设置多种解析记录](setcontent.html)、[子名称管理](setsubdomain.html) 等。
 
 ## ENS APP 是什么
 
-ENS APP 是负责帮助用户操作 ENS 相关智能合约的应用，普通用户要注册与管理 ENS 域名，就需要通过 ENS APP 与相关的智能合约进行交互。
+ENS APP 是负责帮助用户操作 ENS 相关智能合约的应用，普通用户要注册与管理 ENS 名称，就需要通过 ENS APP 与相关的智能合约进行交互。
 
 任何人都可以开发并部署 ENS APP ，尽管可以实现类似的功能，但从可靠性和可用性来看，强烈建议您使用由 ENS 官方团队开发并部署的管理器：
 
@@ -42,7 +42,7 @@ ENS APP 是负责帮助用户操作 ENS 相关智能合约的应用，普通用�
 
 ![](/images/guides/connect-05.png)
 
-现在你可以进行 ENS 域名的各种操作啦！
+现在你可以进行 ENS 名称的各种操作啦！
 
 {% note info %}
 注意：页面左上角显示的 `Main 网络` 表示我们现在连接的是以太坊主网。如果需要连接其他以太坊网络，需要在 Metamask 中切换当前连接的以太坊交易网络。

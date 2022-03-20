@@ -1,5 +1,6 @@
 ---
 part: ENS 中文文档
+subpart: ensip
 title: 'ENSIP-4: 合约 ABI 支持'
 description: A mechanism for storing ABI definitions in ENS, for easy lookup of contract interfaces by callers (formerly EIP-205).
 ---

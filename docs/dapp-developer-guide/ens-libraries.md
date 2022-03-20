@@ -17,11 +17,11 @@ ENS 支持多种主流语言。如果有些你知道的 ENS 库没有在本页�
 
 #### 我应该使用哪个 Javascript 库
 
-如果你用过 web3.js 或 ethers.js ，并且不需要使用创建子域名、转移所有权或更新解析器等功能，那么你可以使用这些库内置的 ENS 特性。
+如果你用过 web3.js 或 ethers.js ，并且不需要使用创建子名称、转移所有权或更新解析器等功能，那么你可以使用这些库内置的 ENS 特性。
 
-如果你在用 React ，并且只需要在 UI 界面中对 ENS 域名进行正向和反向解析，那么你可以使用 react-ens-address。
+如果你在用 React ，并且只需要在 UI 界面中对 ENS 名称进行正向和反向解析，那么你可以使用 react-ens-address。
 
-如果你用过 ethers.js ，并且只需要对 ENS 域名进行正向和反向解析，那么你可以使用 ethers.js 库中对 ENS 的支持。
+如果你用过 ethers.js ，并且只需要对 ENS 名称进行正向和反向解析，那么你可以使用 ethers.js 库中对 ENS 的支持。
 
 如果你想要将 ENS 实例部署到您的开发环境中，那么你可以使用 embark.io 或 waffle.io ，它们可以让你在以太坊测试实例中配置和部署 ENS 注册表。
 

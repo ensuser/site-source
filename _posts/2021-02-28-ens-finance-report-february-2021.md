@@ -10,7 +10,7 @@ description:
 
 ![](/images/news/2021-02-28-ens-finance-report-february-2021/01.jpeg)
 
-以太坊域名服务（ENS）是一项属于社区的公共设施。因此，我们希望在资金来源和流向方面提供更多的透明度。我们计划定期进行财务更新，现在是第一次。
+以太坊名称服务（ENS）是一项属于社区的公共设施。因此，我们希望在资金来源和流向方面提供更多的透明度。我们计划定期进行财务更新，现在是第一次。
 
 ## 组织架构
 
@@ -20,31 +20,31 @@ ENS 是一个[开源项目](https://github.com/ensdomains)，因此确切地讲�
 
 ENS 根域由一个 4/7 的多重签名合约（Multisig）管理，其密钥持有人也已经在 Organization 页面上列明。多重签名密钥持有者中只有一位从事 ENS 开发：尼克·约翰逊（Nick Johnson），他是 ENS 的创建者和主要开发者。其余持有者是以太坊社区其他项目的成员。这种大多数根密钥持有者来自项目之外的机制可以更好地为项目负责。
 
-管理从 .ETH 域名注册和续费中获得的 ETH 是 ENS 根域密钥持有者的工作之一。True Names LTD 的 ENS 开发团队要想动用这些 ETH，必须先向 ENS 根域密钥持有者提交请求或建议，由他们决定是否将 ETH 分配给开发团队。到目前为止，True Names LTD 既没有向 ENS 根域密钥持有者请求过 ETH，也没有收到过这些 ETH。
+管理从 .ETH 名称注册和续费中获得的 ETH 是 ENS 根域密钥持有者的工作之一。True Names LTD 的 ENS 开发团队要想动用这些 ETH，必须先向 ENS 根域密钥持有者提交请求或建议，由他们决定是否将 ETH 分配给开发团队。到目前为止，True Names LTD 既没有向 ENS 根域密钥持有者请求过 ETH，也没有收到过这些 ETH。
 
 ### 小结
 
-ENS 是一个开源项目。实际管理和开发 ENS 的是一个名为 True Names LTD 的非营利性组织，在 .ETH 域名注册和续费中时产生的收入由一个管理着 ENS 根域的 4/7 多重签名合约接收，并由合约的密钥持有者们将决定如何使用。
+ENS 是一个开源项目。实际管理和开发 ENS 的是一个名为 True Names LTD 的非营利性组织，在 .ETH 名称注册和续费中时产生的收入由一个管理着 ENS 根域的 4/7 多重签名合约接收，并由合约的密钥持有者们将决定如何使用。
 
 ## 资金来源
 
-ENS 的开发有两个资金来源：（1）资助和（2）.ETH 域名注册和续费的收入。
+ENS 的开发有两个资金来源：（1）资助和（2）.ETH 名称注册和续费的收入。
 
 ### 资助
 
 True Names LTD 已获得以太坊基金会（最主要资金来源）、Chainlink、Protocol Labs 和我们网站上列出的其他组织的资助。
 
-### .ETH 域名收入
+### .ETH 名称收入
 
-2019 年 5 月，ENS 从押金模式（[在此取回当时的押金](http://reclaim.ens.domains/)）调整为年费模式。如上所述，所有在 .ETH 域名注册和续费上的收入全部流入 ENS 根域管理合约，而非 True Names LTD。True Names LTD 计划向 ENS 根域密钥持有人申请定期支出这些资金，作为 ENS 开发的长期资金，但是目前 True Names LTD 还从来没有要求过 ENS 根域密钥持有人提供 ETH。（在传统的 Internet 社区中，这种长期的资金是有先例的：[IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) 和其他机构的是以 DNS 上注册和续费 .ORG 域名的费用作为资金来源。）
+2019 年 5 月，ENS 从押金模式（[在此取回当时的押金](http://reclaim.ens.domains/)）调整为年费模式。如上所述，所有在 .ETH 名称注册和续费上的收入全部流入 ENS 根域管理合约，而非 True Names LTD。True Names LTD 计划向 ENS 根域密钥持有人申请定期支出这些资金，作为 ENS 开发的长期资金，但是目前 True Names LTD 还从来没有要求过 ENS 根域密钥持有人提供 ETH。（在传统的 Internet 社区中，这种长期的资金是有先例的：[IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) 和其他机构的是以 DNS 上注册和续费 .ORG 名称的费用作为资金来源。）
 
-2019 年末，ENS 开放了 3-6 个字符 .ETH 域名的注册（之前只有 7 个字符以上的的 .ETH 域名可以注册）。对于这类域名的首次开放注册，我们与 OpenSea 合作举办了一次拍卖。这次拍卖筹集的 ETH（5699 ETH，当时价值约 1100,000 美元）交给了 True Names LTD。去年，True Names LTD 出售了一些以太坊来支持开发工作。
+2019 年末，ENS 开放了 3-6 个字符 .ETH 名称的注册（之前只有 7 个字符以上的的 .ETH 名称可以注册）。对于这类名称的首次开放注册，我们与 OpenSea 合作举办了一次拍卖。这次拍卖筹集的 ETH（5699 ETH，当时价值约 1100,000 美元）交给了 True Names LTD。去年，True Names LTD 出售了一些以太坊来支持开发工作。
 
-短域名拍卖和 .ETH 域名注册和续费的第一年半费用模式发生了，而ETH的价格明显低于现在（$ 100- $ 300的范围）。True Names LTD 和 ENS 根域密钥持有人将大部分资金保留为 ETH，而 ETH 最近大幅升值，从而大大增加了 ENS 开发储备资金的价值。
+短名称拍卖和 .ETH 名称注册和续费的第一年半费用模式发生了，而ETH的价格明显低于现在（$ 100- $ 300的范围）。True Names LTD 和 ENS 根域密钥持有人将大部分资金保留为 ETH，而 ETH 最近大幅升值，从而大大增加了 ENS 开发储备资金的价值。
 
 ### 小结
 
-到目前为止，True Names LTD 的 ENS 开发团队已获得资助并出售了自 2019 年底从 .ETH 短域名拍卖中筹集的一些 ETH。ENS 开发长期资金来源是计划向 ENS 根域密钥持有者们提出申请，定期支取 .ETH 域名注册和续费的收入。
+到目前为止，True Names LTD 的 ENS 开发团队已获得资助并出售了自 2019 年底从 .ETH 短名称拍卖中筹集的一些 ETH。ENS 开发长期资金来源是计划向 ENS 根域密钥持有者们提出申请，定期支取 .ETH 名称注册和续费的收入。
 
 ## 2020 年的收入和支出
 
@@ -81,11 +81,11 @@ True Names LTD 拥有 3 名全职开发人员，1 名全职运营总监，2 名�
 
 - ETH 控制器，[controller.ens.eth](https://cn.etherscan.com/address/0x283af0b28c62c092c9727f1ee09c02ca627eb7f5)：5,626 ETH（〜 9,564,200 美元）
 
-最初，这是用户为 .ETH 域名注册和续费支付的 ETH（这里是指 ENS 费用，不是矿工收到的以太坊 Gas 费）。这些由 ENS 根域多签合约控制。
+最初，这是用户为 .ETH 名称注册和续费支付的 ETH（这里是指 ENS 费用，不是矿工收到的以太坊 Gas 费）。这些由 ENS 根域多签合约控制。
 
 - ENS 根域多签合约（Multisig），[multisig.ens.eth](https://cn.etherscan.com/address/0xcf60916b6cb4753f58533808fa610fcbd4098ec0)：2,272 ETH（〜 3,862,400 美元）
 
-这是 ENS 根域多签合约本身。目前它持有的 ETH 是在 2020 年初进行错误修复迁移之前从 .ETH 域名注册和续费中获得的。
+这是 ENS 根域多签合约本身。目前它持有的 ETH 是在 2020 年初进行错误修复迁移之前从 .ETH 名称注册和续费中获得的。
 
 ### 小结
 

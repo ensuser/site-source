@@ -68,6 +68,6 @@ from ens.auto import ns
 EnsResolver ens = new EnsResolver(web3j, 300 /* sync threshold, seconds */);
 ```
 
-一些 web3 库（例如 ethers.js 、web3j 和 web3.py）已经内置了对域名解析的支持。在这些库中，只要可以使用地址的地方，都可以直接使用 ENS 域名，也就是说，除非你想手动解析域名或是进行其他特殊的 ENS 操作，否则你根本不需要直接与它们的 ENS API 交互。
+一些 web3 库（例如 ethers.js 、web3j 和 web3.py）已经内置了对名称解析的支持。在这些库中，只要可以使用地址的地方，都可以直接使用 ENS 名称，也就是说，除非你想手动解析名称或是进行其他特殊的 ENS 操作，否则你根本不需要直接与它们的 ENS API 交互。
 
 如果你的平台没有可用的库，你可以使用 [这里](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol) 的接口定义直接实例化 ENS 注册表合约。在 [ENS 部署情况](../ens-deployments.html) 页面中可以找到各个网络的 ENS 注册表地址。

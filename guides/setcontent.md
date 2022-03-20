@@ -1,11 +1,11 @@
 ---
 part: ENS 使用教程
-title: 如何将 ENS 域名解析至 IPFS 上存储的内容并通过 EthLink 访问
-keywords: ENS解析, 域名解析, IPFS, 内容哈希, 详细教程
-description: 这篇文章中，我们会介绍如何将 ENS 域名解析至 IPFS 上存储的内容，并通过 EthLink 访问这些内容。
+title: 如何将 ENS 名称解析至 IPFS 上存储的内容并通过 EthLink 访问
+keywords: ENS解析, 名称解析, IPFS, 内容哈希, 详细教程
+description: 这篇文章中，我们会介绍如何将 ENS 名称解析至 IPFS 上存储的内容，并通过 EthLink 访问这些内容。
 ---
 
-前面的教程中，我们提到了 [解析记录的多个类型](/guides/setrecords.html#解析记录介绍)。本文会介绍如何将 ENS 域名解析至 IPFS 上存储的内容，并通过 EthLink 访问这些内容。
+前面的教程中，我们提到了 [解析记录的多个类型](/guides/setrecords.html#解析记录介绍)。本文会介绍如何将 ENS 名称解析至 IPFS 上存储的内容，并通过 EthLink 访问这些内容。
 
 ## 准备工作
 
@@ -21,13 +21,13 @@ description: 这篇文章中，我们会介绍如何将 ENS 域名解析至 IPFS
 
 ![](/images/guides/setcontent/setcontent-02.png)
 
-## 将 ENS 域名解析至内容哈希
+## 将 ENS 名称解析至内容哈希
 
 下面我们以 `ceshi.eth` 为例介绍如何添加一条指向这个网页哈希地址的解析记录。
 
 {% note info %}
 
-1. 在浏览器上打开 [ENS APP](https://app.ens.domains/)，并使用域名的**管理员账户** [连接](index.html#在浏览器中连接)。
+1. 在浏览器上打开 [ENS APP](https://app.ens.domains/)，并使用名称的**管理员账户** [连接](index.html#在浏览器中连接)。
 2. 输入 `ceshi.eth` 并点击 `查询` 按钮，进入 `ceshi.eth` 的管理页面。
 3. 在 `解析记录` 区域中点击 `+` 按钮展开记录添加区域。
 4. 点击 `选择一种类型` 下拉菜单，从中选择 `内容哈希` 选项。
@@ -43,9 +43,9 @@ description: 这篇文章中，我们会介绍如何将 ENS 域名解析至 IPFS
 
 ![](/images/guides/setcontent/setcontent-02.png)
 
-## 通过 EthLink 访问域名解析到的内容
+## 通过 EthLink 访问名称解析到的内容
 
-[EthLink](http://eth.link/) 是一项通过 **DNS**（注意这里不是 ENS）的方式实现访问 .eth 域名关联内容的服务。使用方法是：在 ENS 域名后面追加 `.link` 作为网址，就可以在浏览器中直接访问 .eth 域名关联的内容了。
+[EthLink](http://eth.link/) 是一项通过 **DNS**（注意这里不是 ENS）的方式实现访问 .eth 名称关联内容的服务。使用方法是：在 ENS 名称后面追加 `.link` 作为网址，就可以在浏览器中直接访问 .eth 名称关联的内容了。
 
 比如，我们前面在为 `ceshi.eth` 添加了解析到内容哈希的记录，现在就可以通过 `ceshi.eth.link` 这个网址在浏览器中访问这些内容了，效果如下：
 

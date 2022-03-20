@@ -7,7 +7,7 @@ title: ENS 注册表合约 - ENS 的核心合约
 
 ENS 注册表合约是 ENS 系统中的核心合约，当前[在用的注册表合约](https://cn.etherscan.com/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e#code)（ENSRegistryWithFallback）是升级版本（带回退功能，兼容[原始版本](https://cn.etherscan.com/address/0x314159265dd8dbb310642f98f50c066173c1259b)），在 2020 年 1 月 30 日部署完成，如果不出意外，这也会是最终版。
 
-ENS 注册表合约的功能是维护所有域名和子域名列表，并存储关于每个域名的三个关键信息：域名的所有者、域名的解析器、域名下所有记录的缓存存活时间（即 TTL）。您可以在 [ENS 架构](/docs/readme.html#ENS-架构)中查看注册表的工作原理。
+ENS 注册表合约的功能是维护所有名称和子名称列表，并存储关于每个名称的三个关键信息：名称的所有者、名称的解析器、名称下所有记录的缓存存活时间（即 TTL）。您可以在 [ENS 架构](/docs/readme.html#ENS-架构)中查看注册表的工作原理。
 
 ## ENS 注册表合约的部分关键交易（前 7 笔交易）
 
@@ -20,9 +20,9 @@ ENS 注册表合约的功能是维护所有域名和子域名列表，并存储�
 | 5 | ENSRegistryWithFallback | [0x7311c](https://cn.etherscan.com/tx/0x7311cdefc63aaf6226110ec9d682714f878ebdc115d064c491e802e664849e47 "Jan-30-2020 01:05:43 AM") | [Deployer-0x4fe4e](https://cn.etherscan.com/address/0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8) | setSubnodeOwner | 设置 addr.reverse 的所有者为 [ReverseRegistrar-0x084b1](https://cn.etherscan.com/address/0x084b1c3c81545d370f3634392de611caabff8148#code "OwnedResolver-0x30200") |
 | 6 | ENSRegistryWithFallback | [0xebc1b](https://cn.etherscan.com/tx/0xebc1b87ad98d8735367c8c60137a998a0fe74be8ee7b107fda835975681aae8f "Jan-30-2020 01:07:04 AM") | [Deployer-0x4fe4e](https://cn.etherscan.com/address/0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8) | setOwner | 设置 reverse 的所有者为 [Dead-0x00000](https://cn.etherscan.com/address/0x0000000000000000000000000000000000000000) |
 | 7 | ENSRegistryWithFallback | [0xf296f](https://cn.etherscan.com/tx/0xf296f9b8d5143c6fca65b010cb9d621d0574dca1950ba8115f5c9f9161f661b6 "Jan-30-2020 01:09:41 AM") | [Deployer-0x4fe4e](https://cn.etherscan.com/address/0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8) | setSubnodeOwner | 设置 xyz 的所有者为 [DNSRegistrar-0xa2f42](https://cn.etherscan.com/address/0xa2f428617a523837d4adc81c67a296d42fd95e86#code) |
-| 8 | ENSRegistryWithFallback | [0xe120b](https://cn.etherscan.com/tx/0xe120b74ce60f64d6f2c289588f645b83c47b5e0c20c97b0be13adfdd93289b51 "Jan-30-2020 01:13:10 AM") | [Deployer-0x4fe4e](https://cn.etherscan.com/address/0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8) | setOwner | 设置根域名的所有者为 [Root-0xab528](https://cn.etherscan.com/address/0xab528d626ec275e3fad363ff1393a41f581c5897#code) |
+| 8 | ENSRegistryWithFallback | [0xe120b](https://cn.etherscan.com/tx/0xe120b74ce60f64d6f2c289588f645b83c47b5e0c20c97b0be13adfdd93289b51 "Jan-30-2020 01:13:10 AM") | [Deployer-0x4fe4e](https://cn.etherscan.com/address/0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8) | setOwner | 设置根名称的所有者为 [Root-0xab528](https://cn.etherscan.com/address/0xab528d626ec275e3fad363ff1393a41f581c5897#code) |
 
-### 部分关键域名的相关信息
+### 部分关键名称的相关信息
 
 - "name": "eth",
   - "node": "0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae",

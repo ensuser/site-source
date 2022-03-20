@@ -14,7 +14,7 @@ function supportsInterface(bytes4 interfaceID) constant returns (bool);
 | 记录类型 | 函数 | 接口 ID | 定义文档 |
 | :--- | :--- | :--- | :--- |
 | 以太坊地址 | addr | 0x3b3b57de | [EIP137](https://github.com/ethereum/EIPs/issues/137) |
-| ENS 域名 | name | 0x691f3431 | [EIP181](https://github.com/ethereum/EIPs/issues/181) |
+| ENS 名称 | name | 0x691f3431 | [EIP181](https://github.com/ethereum/EIPs/issues/181) |
 | ABI 规范 | ABI | 0x2203ab56 | [EIP205](https://eips.ethereum.org/EIPS/eip-205) |
 | 公钥 | pubkey | 0xc8690233 | [EIP619](https://github.com/ethereum/EIPs/pull/619) |
 | 文本记录 | text | 0x59d1d43c | [EIP634](https://eips.ethereum.org/EIPS/eip-634) |

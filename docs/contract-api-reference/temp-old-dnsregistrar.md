@@ -21,17 +21,17 @@ title: DNS Registrar
 
 ### DnsRegistrar
 
-DnsRegistrar 为给定的 DNS 类型查找一个域名，并返回一个声明，利用这个声明，你可以向 DNSSEC Oracle 提交证明或从中删除证明，以及通过 DnsRegistrar 合约注册 ENS 域名。
+DnsRegistrar 为给定的 DNS 类型查找一个名称，并返回一个声明，利用这个声明，你可以向 DNSSEC Oracle 提交证明或从中删除证明，以及通过 DnsRegistrar 合约注册 ENS 名称。
 
 ``` solidity
 DNSRegistrar.claim(name)
 
   /**
-   * @param {string} name – 您想要声明的域名
+   * @param {string} name – 您想要声明的名称
    */
 ```
 
-返回一个声明对象，该对象允许您声明一个给定 ENS 域名的所有权，声明的方式是通过提交证明到 DNSSEC Oracle 并同时在注册器上进行声明。
+返回一个声明对象，该对象允许您声明一个给定 ENS 名称的所有权，声明的方式是通过提交证明到 DNSSEC Oracle 并同时在注册器上进行声明。
 
 ``` solidity
 Claim.getOwner()

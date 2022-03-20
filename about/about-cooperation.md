@@ -8,8 +8,8 @@ title: 关于交流合作
 
 ## 当前合作伙伴列表
 
-- [ENS.DOMAINS](https://ens.domains/): ENS 官方机构，负责 ENS 域名的开发、运营。
-- [MMX（明智墨思）](https://mmx.co/): 全球知名的域名注册局，管理着 30 余个顶级域名，其中包括 `.vip` `.luxe` 等。
+- [ENS.DOMAINS](https://ens.domains/): ENS 官方机构，负责 ENS 名称的开发、运营。
+- [MMX（明智墨思）](https://mmx.co/): 全球知名的名称注册局，管理着 30 余个顶级名称，其中包括 `.vip` `.luxe` 等。
 - [登链社区（深入浅出区块链）](https://learnblockchain.cn/): 是由一群区块链技术爱好者共同维护的一个秉承去中心化精神的区块链技术博客。
 - [以太坊爱好者](https://ethfans.org/): 国内一流（可能是最好）的以太坊中文技术社区，持续推广和普及以太坊的技术。
 - [Token Pocket（TP 钱包）](https://www.tokenpocket.pro/): 一个集 EOS、ETH、BTC 等多币种钱包于一体的去中心化通用数字钱包，集成了多个 Dapp，支持查看实时行情、币币兑换等功能。

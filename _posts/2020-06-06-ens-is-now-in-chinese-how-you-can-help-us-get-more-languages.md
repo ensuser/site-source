@@ -21,7 +21,7 @@ description:
 
 他们主动承担起了把 ENS 的管理器和 [文档](https://ensuser.com/docs/) 翻译成中文的任务，并定期检查以保持更新。这是一项艰巨的工作，我们非常感谢他们的贡献。ENS 作为一个 [开源项目](https://medium.com/the-ethereum-name-service/who-should-own-the-naming-system-of-the-future-ens-as-a-public-good-10e4a0ab71d8)，有一点很酷，那就是我们团队之外的人做出了重要的贡献。
 
-起初，ENSUser 在自己的网站上启用了一个 [中文版的管理器](https://app.ensuser.com/)。受他们工作的启发，我们现在 [官方管理器](https://app.ens.domains/) 的搜索页面和单独的域名页面上添加了语言切换工具，并整合了他们的翻译。
+起初，ENSUser 在自己的网站上启用了一个 [中文版的管理器](https://app.ensuser.com/)。受他们工作的启发，我们现在 [官方管理器](https://app.ens.domains/) 的搜索页面和单独的名称页面上添加了语言切换工具，并整合了他们的翻译。
 
 ![](/images/news/2020-06-06-ens-is-now-in-chinese-how-you-can-help-us-get-more-languages/02.gif)
 

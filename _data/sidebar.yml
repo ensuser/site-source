@@ -28,17 +28,19 @@ docs:
     deploying-ens-on-a-private-chain: /docs/deploying-ens-on-a-private-chain.html
     dns-registrar-guide: /docs/dns-registrar-guide.html
     bug-bounty-program: /docs/bug-bounty-program.html
-  ensip:
-    ensip-1: /docs/ens-improvement-proposals/ensip-1-ens.html
-    ensip-2: /docs/ens-improvement-proposals/ensip-2-initial-hash-registrar.html
-    ensip-3: /docs/ens-improvement-proposals/ensip-3-reverse-resolution.html
-    ensip-4: /docs/ens-improvement-proposals/ensip-4-support-for-contract-abis.html
-    ensip-5: /docs/ens-improvement-proposals/ensip-5-text-records.html
-    ensip-6: /docs/ens-improvement-proposals/ensip-6-dns-in-ens.html
-    ensip-7: /docs/ens-improvement-proposals/ensip-7-contenthash-field.html
-    ensip-8: /docs/ens-improvement-proposals/ensip-8-interface-discovery.html
-    ensip-9: /docs/ens-improvement-proposals/ensip-9-multichain-address-resolution.html
-    ensip-10: /docs/ens-improvement-proposals/ensip-10-wildcard-resolution.html
+    FOLDEDMENU-ensip:
+      ensip-1: /docs/ens-improvement-proposals/ensip-1-ens.html
+      ensip-2: /docs/ens-improvement-proposals/ensip-2-initial-hash-registrar.html
+      ensip-3: /docs/ens-improvement-proposals/ensip-3-reverse-resolution.html
+      ensip-4: /docs/ens-improvement-proposals/ensip-4-support-for-contract-abis.html
+      ensip-5: /docs/ens-improvement-proposals/ensip-5-text-records.html
+      ensip-6: /docs/ens-improvement-proposals/ensip-6-dns-in-ens.html
+      ensip-7: /docs/ens-improvement-proposals/ensip-7-contenthash-field.html
+      ensip-8: /docs/ens-improvement-proposals/ensip-8-interface-discovery.html
+      ensip-9: /docs/ens-improvement-proposals/ensip-9-multichain-address-resolution.html
+      ensip-10: /docs/ens-improvement-proposals/ensip-10-wildcard-resolution.html
+      ensip-11: /docs/ens-improvement-proposals/ensip-11-evmchain-address-resolution.html
+      ensip-12: /docs/ens-improvement-proposals/ensip-12-avatar-text-records.html
   dapp-developer-guide:
     ens-enabling-your-dapp: /docs/dapp-developer-guide/ens-enabling-your-dapp.html
     ens-libraries: /docs/dapp-developer-guide/ens-libraries.html
@@ -48,6 +50,7 @@ docs:
     registering-and-renewing-names: /docs/dapp-developer-guide/registering-and-renewing-names.html
     front-end-design-guidelines: /docs/dapp-developer-guide/front-end-design-guidelines.html
     ens-as-nft: /docs/dapp-developer-guide/ens-as-nft.html
+    ens-l2-offchain: /docs/dapp-developer-guide/ens-l2-offchain.html
   contract-api-reference:
     name-processing: /docs/contract-api-reference/name-processing.html
     ens: /docs/contract-api-reference/ens.html

@@ -1,10 +1,11 @@
 ---
 part: ENS 中文文档
-title: Initial Hash Registrar
+subpart: ensip
+title: 初始哈希注册器
 description: Describes the hash registrar initially used to register ENS .eth domains (formerly EIP-162).
 ---
 
-| **作者**  | Maurelian, Nick Johnson [nick@ethereum.org](mailto:nick@ethereum.org), Alex Van de Sande [avsa@ethereum.org](mailto:avsa@ethereum.org) |
+| **作者**  | Maurelian, Nick Johnson, Alex Van de Sande |
 | ----------- | ---------------------------- |
 | **状态**  | 废止 |
 | **创建日期** | 2016-10-25 |

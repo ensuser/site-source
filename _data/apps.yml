@@ -15,7 +15,7 @@
     - 交流
 
 - name: Eth.Link
-  description: 借助 DNS 访问 .eth 域名关联内容 <br>[ <a href="/guides/setcontent.html" target="_blank" rel="noopener external nofollow noreferrer">使用教程</a> ]
+  description: 借助 DNS 访问 .eth 名称关联内容 <br>[ <a href="/guides/setcontent.html" target="_blank" rel="noopener external nofollow noreferrer">使用教程</a> ]
   link: https://eth.link/
   icon: ensdomains
   tags:
@@ -89,14 +89,14 @@
     - 工具
 
 - name: Metamask
-  description: 以太坊钱包，支持打开 ENS 域名指向的网站
+  description: 以太坊钱包，支持打开 ENS 名称指向的网站
   link: https://metamask.io/
   icon: metamask
   tags:
     - 钱包
 
 - name: eth.af
-  description: 通过 ENS 域名查询相应账户持有的代币
+  description: 通过 ENS 名称查询相应账户持有的代币
   link: https://eth.af/
   icon: eth-af
   tags:

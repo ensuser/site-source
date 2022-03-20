@@ -24,8 +24,8 @@ ENSUser 社区成立已有两年，这期间，社区成员不断交流、互相
 
 领取方法：
 
-1. 在微信群内找到成员 `liubenben.eth`，通过私信将您 ENS 域名发送给我们。
-2. 我们会将徽章分发至您的 ENS 域名。
+1. 在微信群内找到成员 `liubenben.eth`，通过私信将您 ENS 名称发送给我们。
+2. 我们会将徽章分发至您的 ENS 名称。
 
 ### OUTSTANDING CONTRIBUTION 徽章分发规则
 

@@ -1,5 +1,5 @@
 ---
-title: 现在可以用 Gnosis Safe 来管理 ENS 域名了
+title: 现在可以用 Gnosis Safe 来管理 ENS 名称了
 date: 2021-04-04 13:00:00
 categories: 官方文章
 original: 
@@ -16,13 +16,13 @@ PleaserDAO 购买 [@pplpleasr1](https://twitter.com/pplpleasr1) 臭名昭著的 
 
 ![](/images/news/2021-04-04-you-can-now-manage-ens-names-with-gnosis-safe/02.png)
 
-只要某个外部账户（EOA）代表 multisig（多方签名合约） 设置一个 ENS 域名，就可以很容易地将其指向 multisig 账户。
+只要某个外部账户（EOA）代表 multisig（多方签名合约） 设置一个 ENS 名称，就可以很容易地将其指向 multisig 账户。
 
-然而，为其设置反向记录（允许 dapp 识别以太坊地址指向的 ENS 域名）一直很困难，因为设置必须由 Gnosis 合约账户本身来实现。
+然而，为其设置反向记录（允许 dapp 识别以太坊地址指向的 ENS 名称）一直很困难，因为设置必须由 Gnosis 合约账户本身来实现。
 
-感谢 Gnosis 团队的努力，你现在可以通过 Gnosis Safe 管理你的 ENS 域名了。
+感谢 Gnosis 团队的努力，你现在可以通过 Gnosis Safe 管理你的 ENS 名称了。
 
-以下是简要步骤（注意：我假设你已经把你的 ENS 域名指向了 Gnosis Safe 地址)。
+以下是简要步骤（注意：我假设你已经把你的 ENS 名称指向了 Gnosis Safe 地址)。
 
 ### 第 1 步：从 “APPS” 部分打开 ENS 页面
 
@@ -32,7 +32,7 @@ PleaserDAO 购买 [@pplpleasr1](https://twitter.com/pplpleasr1) 臭名昭著的 
 
 页面开打后，ENS 页面就会自动显示当前连接的 Gnosis Safe 账户，而不是你自己的外部账户。
 
-### 第 2 步：打开 “我的帐户” => “设置反向解析”，选择相应的 ENS 域名，然后点击 “保存”
+### 第 2 步：打开 “我的帐户” => “设置反向解析”，选择相应的 ENS 名称，然后点击 “保存”
 
 ![](/images/news/2021-04-04-you-can-now-manage-ens-names-with-gnosis-safe/04.png)
 

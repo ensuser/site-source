@@ -3,7 +3,7 @@ layout: showing
 title: China ENS Holders
 ---
 
-| No. | 持有者及其域名 | Opensea | 代表性域名 | 备注 |
+| No. | 持有者及其名称 | Opensea | 代表性名称 | 备注 |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | [0xb3e62](https://app.ens.domains/address/0xb3e625228be2d986af0076ab8f75ba3318db26d1) | [Anonymous](https://opensea.io/accounts/0xb3e625228be2d986af0076ab8f75ba3318db26d1/ens) | caifu jiaoyu wuliu | |
 | 2 | [0x95978](https://app.ens.domains/address/0x95978039e639315d25505f8141598a77cb1db9a7) | [Anonymous](https://opensea.io/accounts/0x95978039e639315d25505f8141598a77cb1db9a7/ens) | shouji sheng speak | |
@@ -20,5 +20,5 @@ title: China ENS Holders
 | 8 | [0x14E31](https://app.ens.domains/address/0x14E318c09Eb7cF77826B359BD8695D040F72eC10) | | beijing alibaba address | |
 
 ENS Token 持有情况
-[域名持有数量排名](https://cn.etherscan.com/token/0xfac7bea255a6990f749363002136af6556b31e04#balances)
+[名称持有数量排名](https://cn.etherscan.com/token/0xfac7bea255a6990f749363002136af6556b31e04#balances)
 [环形图表](https://cn.etherscan.com/token/tokenholderchart/0xfac7bea255a6990f749363002136af6556b31e04)

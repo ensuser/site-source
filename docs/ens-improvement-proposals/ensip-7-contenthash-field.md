@@ -1,53 +1,54 @@
 ---
-description: >-
-  Introduces a field for storing content addresses and hashes in ENS (formerly
-  EIP-1577).
+part: ENS 中文文档
+subpart: ensip
+title: 'ENSIP-7: 内容哈希字段'
+description: 引入一个字段，用于在 ENS (原来的 EIP-1577) 中存储内容地址和哈希值。
 ---
 
-# ENSIP-7: Contenthash field
+| **作者**  | Dean Eigenmann <[dean@ens.domains](mailto:dean@ens.domains)>, Nick Johnson <[nick@ens.domains](mailto:nick@ens.domains)> |
+| ----------- | --------------- |
+| **状态**  | 完结     |
+| **创建时间** | 2018-11-13   |
 
-| **Author**  | Dean Eigenmann <[dean@ens.domains](mailto:dean@ens.domains)>, Nick Johnson <[nick@ens.domains](mailto:nick@ens.domains)> |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Status**  | Final                                                                                                                    |
-| **Created** | 2018-11-13                                                                                                               |
+### 摘要
 
-### Abstract
+这个 ENSIP 为 ENS 解析器引入了新的 `contenthash` 字段，允许更好地定义名称到网络和内容地址的映射系统。此外， `content` 和 `multihash` 字段已弃用。
 
-This ENSIP introduces the new `contenthash` field for ENS resolvers, allowing for a better defined system of mapping names to network and content addresses. Additionally the `content` and `multihash` fields are deprecated.
+### 动机
 
-### Motivation
+多个应用程序，包括 [Metamask](https://metamask.io) 和一些类似 [Status](https://status.im) 的移动客户端，已经开始将 ENS 名称解析到托管在分布式系统上的内容，例如 [IPFS](https://ipfs.io) 和 [Swarm](https://swarm-guide.readthedocs.io)。由于存储和寻址内容的方式多种多样，因此需要一种标准，以便这些应用程序知道如何解析名称，并让名称所有者知道如何解析其内容。
 
-Multiple applications including [Metamask](https://metamask.io) and mobile clients such as [Status](https://status.im) have begun resolving ENS names to content hosted on distributed systems such as [IPFS](https://ipfs.io) and [Swarm](https://swarm-guide.readthedocs.io). Due to the various ways content can be stored and addressed, a standard is required so these applications know how to resolve names and that domain owners know how their content will be resolved.
+`contenthash` 字段可以方便地规范 ENS 中的网络和内容地址。
 
-The `contenthash` field allows for easy specification of network and content addresses in ENS.
-
-### Specification
+### 规范
 
 The field `contenthash` is introduced, which permits a wide range of protocols to be supported by ENS names. Resolvers supporting this field MUST return `true` when the `supportsInterface` function is called with argument `0xbc1c58d1`.
 
-The fields `content` and `multihash` are deprecated.
+引入了字段 `contenthash`，它允许 ENS 名称支持广泛的协议。当使用参数 `0xbc1c58d1` 调用 `supportsInterface` 函数时，支持该字段的解析器必须返回 `true`。
 
-The value returned by `contenthash` MUST be represented as a machine-readable [multicodec](https://github.com/multiformats/multicodec). The format is specified as follows:
+字段 `content` 和 `multihash` 已弃用。
+
+`contenthash` 返回的值必须表示为机器可读的 [multicodec](https://github.com/multiformats/multicodec)。该格式标准如下:
 
 ```
 <protoCode uvarint><value []byte>
 ```
 
-protoCodes and their meanings are specified in the [multiformats/multicodec](https://github.com/multiformats/multicodec) repository.
+[multiformats/multicodec](https://github.com/multiformats/multicodec) 仓库中定义了 protoCodes 及其含义。
 
-The encoding of the value depends on the content type specified by the protoCode. Values with protocodes of 0xe3 and 0xe4 represent IPFS and Swarm content; these values are encoded as v1 [CIDs](https://github.com/multiformats/cid) without a base prefix, meaning their value is formatted as follows:
+该值的编码取决于 protoCode 指定的内容类型。编码为 0xe3 和 0xe4 的值表示 IPFS 和 Swarm 内容，这些值被编码为 v1 [CIDs](https://github.com/multiformats/cid)，没有基前缀，这意味着它们的值被格式化如下:
 
 ```
 <protoCode uvarint><cid-version><multicodec-content-type><multihash-content-address>
 ```
 
-When resolving a `contenthash`, applications MUST use the protocol code to determine what type of address is encoded, and resolve the address appropriately for that protocol, if supported.
+当解析 `contenthash` 时，应用程序必须使用协议代码来确定被编码的地址类型，并在支持的情况下为该协议解析正确的地址。
 
-#### Example
+#### 示例
 
 **IPFS**
 
-Input data:
+输入数据:
 
 ```
 storage system: IPFS (0xe3)
@@ -58,13 +59,13 @@ hash length: 32 bytes (0x20)
 hash: 29f2d17be6139079dc48696d1f582a8530eb9805b561eda517e22a892c7e3f1f
 ```
 
-Binary format:
+二进制格式:
 
 ```
 0xe3010170122029f2d17be6139079dc48696d1f582a8530eb9805b561eda517e22a892c7e3f1f
 ```
 
-Text format:
+文本格式:
 
 ```
 ipfs://QmRAQB6YaCyidP37UdDnjFY5vQuiBrcqdyoW1CuDgwxkD4
@@ -72,7 +73,7 @@ ipfs://QmRAQB6YaCyidP37UdDnjFY5vQuiBrcqdyoW1CuDgwxkD4
 
 #### Swarm
 
-Input data:
+输入数据:
 
 ```
 storage system: Swarm (0xe4)
@@ -83,41 +84,41 @@ hash length: 32 bytes (0x20)
 hash: d1de9994b4d039f6548d191eb26786769f580809256b4685ef316805265ea162
 ```
 
-Binary format:
+二进制格式:
 
 ```
 0xe40101fa011b20d1de9994b4d039f6548d191eb26786769f580809256b4685ef316805265ea162
 ```
 
-Text format:
+文本格式:
 
 ```
 bzz://d1de9994b4d039f6548d191eb26786769f580809256b4685ef316805265ea162
 ```
 
-Example usage with swarm hash:
+使用 swarm 哈希的示例:
 
 ```
 $ swarm hash ens contenthash d1de9994b4d039f6548d191eb26786769f580809256b4685ef316805265ea162                                 
 > e40101fa011b20d1de9994b4d039f6548d191eb26786769f580809256b4685ef316805265ea162
 ```
 
-#### Fallback
+#### 回退
 
-In order to support names that have an IPFS or Swarm hash in their `content` field, a grace period MUST be implemented offering those name holders time to update their names. If a resolver does not support the `multihash` interface, it MUST be checked whether they support the `content` interface. If they do, the value of that field SHOULD be treated in a context dependent fashion and resolved. This condition MUST be enforced until at least March 31st, 2019.
+为了支持那些将 IPFS 或 Swarm hash 存储在 `content` 字段中的名称，必须设立一个宽限期，为那些名称的持有人提供时间来更新他们的名称。如果一个解析器不支持 `multihash` 接口，它必须检查是否支持 `content` 接口。如果支持，则该字段的值应以上下文相关的方式处理并解析。该状态必须保持到 2019 年 3 月 31日。
 
-#### Implementation
+#### 实现
 
-To support `contenthash`, a new resolver has been developed and can be found [here](https://github.com/ensdomains/resolvers/blob/master/contracts/PublicResolver.sol), you can also find this smart contract deployed on:
+为了支持 `contenthash`，已经开发了一个新的解析器，可以在 [这里](https://github.com/ensdomains/resolvers/blob/master/contracts/PublicResolver.sol) 找到，你也可以在下面找到这个智能合约:
 
-* Mainnet : [0xd3ddccdd3b25a8a7423b5bee360a42146eb4baf3](https://etherscan.io/address/0xd3ddccdd3b25a8a7423b5bee360a42146eb4baf3)
+* 主网 : [0xd3ddccdd3b25a8a7423b5bee360a42146eb4baf3](https://etherscan.io/address/0xd3ddccdd3b25a8a7423b5bee360a42146eb4baf3)
 * Ropsten : [0xde469c7106a9fbc3fb98912bb00be983a89bddca](https://ropsten.etherscan.io/address/0xde469c7106a9fbc3fb98912bb00be983a89bddca)
 
-There are also implementations in multiple languages to encode and decode `contenthash`:
+编码和解码 `contenthash` 已经通过多种语言来实现:
 
 * [JavaScript](https://github.com/pldespaigne/content-hash)
 * [Python](https://github.com/filips123/ContentHashPy)
 
-### Copyright
+### 版权
 
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+通过 [CC0](https://creativecommons.org/publicdomain/zero/1.0/) 放弃版权及相关权利。

@@ -23,11 +23,11 @@ Web3 浏览器：在台式机上，它可以是任何主流浏览器，例如具
 
 一些以太币：您将需要少量（价值几美分的以太币）加密货币以支付以太坊网络交易费。
 
-ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一个 .ETH 域名（ [注册教程](https://ensuser.com/guides/register.html) ）。
+ETH 名称：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一个 .ETH 名称（ [注册教程](https://ensuser.com/guides/register.html) ）。
 
 ### 1. 选择创建一个新的内容记录
 
-打开 [ENS APP](https://app.ens.domains/)，然后搜索您的 .ETH 域名。如果您还没有内容记录，请单击右侧的 `+` 按钮，然后从下拉菜单中选择 `内容哈希`。
+打开 [ENS APP](https://app.ens.domains/)，然后搜索您的 .ETH 名称。如果您还没有内容记录，请单击右侧的 `+` 按钮，然后从下拉菜单中选择 `内容哈希`。
 
 如果您已有内容记录，请跳过此步骤。
 
@@ -39,7 +39,7 @@ ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一�
 
 ![](/images/news/2020-04-18-upload-to-ipfs-directly-from-the-ens-manager-with-new-tool/03.png)
 
-如果您的名字已经有内容哈希记录，则单击右侧的上传图标：
+如果您的名称已经有内容哈希记录，则单击右侧的上传图标：
 
 ![](/images/news/2020-04-18-upload-to-ipfs-directly-from-the-ens-manager-with-new-tool/04.png)
 
@@ -49,7 +49,7 @@ ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一�
 
 注意：创建新的 Temporal Cloud 帐户并验证您的电子邮件地址时，您将自动享有 Temporal Cloud 免费套餐。这样一来，您最多可以上传 3GB 的数据，并且您上传的所有数据都会在 IPFS 网络上保留至少 12 个月。如果您想上传更多数据，或确保它们在 IPFS 网络上保留的时间超过 12 个月，则可以在此处升级帐户。
 
-如果您已经有一个 Temporal Cloud 帐户，请跳过此步骤（您可以将单个 Temporal Cloud 帐户用于所需的多个 ENS 域名）。
+如果您已经有一个 Temporal Cloud 帐户，请跳过此步骤（您可以将单个 Temporal Cloud 帐户用于所需的多个 ENS 名称）。
 
 ### 4. 登录
 
@@ -65,7 +65,7 @@ ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一�
 
 ### 6. 将IPFS哈希保存到您的内容记录
 
-您还没有完成！该文件已上传到 IPFS，但 IPFS 哈希尚未保存到您 ENS 域名的内容记录中。为此，请单击 `保存`。
+您还没有完成！该文件已上传到 IPFS，但 IPFS 哈希尚未保存到您 ENS 名称的内容记录中。为此，请单击 `保存`。
 
 您的 web3 浏览器将要求您确认交易以保存记录。（提示：您可能需要将以太坊网络交易费调整为更高的金额，以帮助更快地确认交易。）
 
@@ -79,7 +79,7 @@ ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一�
 
 ## 如何访问你的去中心化网站
 
-现在您已经在一个分布式文件存储网络（IPFS）中拥有了一些内容，并使用一个去中心化的域名系统（ENS）指向了这些内容。那么究竟如何使用它们？
+现在您已经在一个分布式文件存储网络（IPFS）中拥有了一些内容，并使用一个去中心化的名称系统（ENS）指向了这些内容。那么究竟如何使用它们？
 
 你可以[在这篇文章中读到更多关于去中心化的方法](https://medium.com/the-ethereum-name-service/all-the-ways-you-can-surf-the-decentralized-web-today-bf8e7a42fa27)，但是这里有一些快速上手的技巧：
 
@@ -87,15 +87,15 @@ ETH 域名：如果您还没有.ETH 名称，则可以在 ENS APP 中注册一�
 
 ### 在浏览器中
 
-在你的 .ETH 域名后面添加 `.LINK`（比如：ensuser.eth.link ），就可以在任何浏览器中访问它。例如，你可以去 [almonit.eth.link](http://almonit.eth.link/#/) （一个去中心化网站的导航页面）。你可以在[这里](https://medium.com/the-ethereum-name-service/ethdns-9d56298fa38a)详细了解它的工作原理。
+在你的 .ETH 名称后面添加 `.LINK`（比如：ensuser.eth.link ），就可以在任何浏览器中访问它。例如，你可以去 [almonit.eth.link](http://almonit.eth.link/#/) （一个去中心化网站的导航页面）。你可以在[这里](https://medium.com/the-ethereum-name-service/ethdns-9d56298fa38a)详细了解它的工作原理。
 
 ### 利用 MetaMask 插件
 
-如果浏览器安装了 MetaMask 插件，你直接访问 `[你的域名].eth/`（一定要在结尾处加上 `/` ，如：`ensuser.eth/`），它会像普通网站那样正常打开。
+如果浏览器安装了 MetaMask 插件，你直接访问 `[你的名称].eth/`（一定要在结尾处加上 `/` ，如：`ensuser.eth/`），它会像普通网站那样正常打开。
 
 ### 具备原生支持的浏览器
 
-有一些浏览器原生支持去中心化的网站。它们分别是：Opera（Android 版本）、Brave（电脑版，需要在域名后加上 `/`），MetaMask 手机版，Unstoppable 浏览器（电脑版）。
+有一些浏览器原生支持去中心化的网站。它们分别是：Opera（Android 版本）、Brave（电脑版，需要在名称后加上 `/`），MetaMask 手机版，Unstoppable 浏览器（电脑版）。
 
 ## 关于上传到其他网络
 

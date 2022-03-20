@@ -1,7 +1,7 @@
 ## 介绍
 
 1. ENSUser 是一个 ENS 社区。
-2. [ENSUser.com](https://ensuer.com/) 网站是社区的一部分，主要用于向 ENS 域名的用户提供相关服务。
+2. [ENSUser.com](https://ensuer.com/) 网站是社区的一部分，主要用于向 ENS 名称的用户提供相关服务。
 3. [此 site-source 代码库](https://github.com/ensuser/site-source)保存着 ENSUser.com 网站内容的源文件。
 
 ## 诚邀修订
