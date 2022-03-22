@@ -47,7 +47,7 @@ interface ExtendedResolver {
 }
 ```
 
-如果一个解析器实现了这个函数，那么在 `supportsInterface()` 被调用且传入 0xTBD 这个接口 ID 时，它**必须**返回 true。
+如果一个解析器实现了这个函数，那么在 `supportsInterface()` 被调用且传入 0x9061b923 这个接口 ID 时，它**必须**返回 true。
 
 ENS 客户端将调用 `resolve` 并传入需要解析的 DNS 编码名称和用于解析器函数的编码后的调用数据 (比如 ENSIP-1 和其他地方指定的)，该函数**必须**返回有效的数据，或在不支持的情况下进行回退。
 
@@ -56,20 +56,21 @@ ENS 客户端将调用 `resolve` 并传入需要解析的 DNS 编码名称和用
 1. 设置 `currentname = name`
 2. 设置 `resolver = ens.resolver(namehash(currentname))`
 3. 如果 `resolver` 不是零地址，则停止并返回 `resolver`。
-4. 如果 `name` 为空 ('' 或 '.')，则停止并返回 null。
+4. 如果 `currentname` 为空 ('' 或 '.')，则停止并返回 null。
 5. 其他情况下，设置 `currentname = parent(currentname)` 并进入第 2 步。
 
 如果上面的过程返回 null，名称解析**必须**终止。其他情况下，兼容 ENSIP-10 的 ENS 客户端解析一条记录时**必须**执行以下步骤:
 
 1. 将 `calldata` 设置为解析函数对应的 ABI 编码数据——例如，解析 `addr` 记录时，设置为 `addr(namehash(name))` 的 ABI 编码。
-2. 设置 `supports2544 = resolver.supportsInterface(0xTBD)`。
-3. 如果 `supports2544` 为 true，则设置 `result = resolver.resolve(dnsencode(name), calldata)`。
-4. 其他情况下，将 `result` 设置为：使用 `calldata` 作为参数来调用 `resolver` 的结果。
-5. 使用对应的解析函数的返回数据 ABI 解码后，返回 `result` (例如，对于 `addr()`， `resolver.resolve()` 的结果经 ABI 解码为 `address`)。
-
-Return result after decoding it using the return data ABI of the corresponding resolution function (eg, for addr(), ABI-decode the result of resolver.resolve() as an address).
+2. 设置 `supportsENSIP10 = resolver.supportsInterface('0x9061b923')`。
+3. 如果 `supportsENSIP10` 为 true，则设置 `result = resolver.resolve(dnsencode(name), calldata)`。
+4. 如果 `supportsENSIP10` 为 false 且 `name == currentname`，则将 `result` 设置为使用 `calldata` 作为调用 `resolver` 获得的结果。
+5. 如果 3 和 4 均不为 true，以失败结束。
+6. 使用对应的解析函数的返回数据 ABI 解码后，返回 `result` (例如，对于 `addr()`， `resolver.resolve()` 的结果经 ABI 解码为 `address`)。
 
 请注意，在所有情况下，解析函数 (`addr()` 等) 和 `resolve` 函数都使用了原来的 `name`， 而不是在解析的第一阶段找到的 `currentname`。
+
+还要注意的是，当使用通配符解析时 (例如，`name != currentname`)，客户端绝对不能调用传统方法，如 `addr` 来解析名称。这些方法只能在与 `name` 精确匹配的解析器中调用。
 
 #### 伪代码
 
@@ -79,25 +80,25 @@ function getResolver(name) {
         const node = namehash(currentname);
         const resolver = ens.resolver(node);
         if(resolver != '0x0000000000000000000000000000000000000000') {
-            return resolver;
+            return [resolver, currentname];
         }
     }
-    return null;
+    return [null, ''];
 }
-
 function resolve(name, func, ...args) {
-    const resolver = getResolver(name);
+    const [resolver, resolverName] = getResolver(name);
     if(resolver === null) {
         return null;
     }
-    const supports2544 = resolver.supportsInterface('0xTBD');
-    let result;
-    if(supports2544) {
+    const supportsENSIP10 = resolver.supportsInterface('0x9061b923');
+    if(supportsENSIP10) {
         const calldata = resolver[func].encodeFunctionCall(namehash(name), ...args);
-        result = resolver.resolve(dnsencode(name), calldata);
+        const result = resolver.resolve(dnsencode(name), calldata);
         return resolver[func].decodeReturnData(result);
-    } else {
+    } else if(name == resolverName) {
         return resolver[func](...args);
+    } else {
+        return null;
     }
 }
 ```
@@ -108,13 +109,15 @@ function resolve(name, func, ...args) {
 
 它也承认当前关于 ENS 通配符解析的共识，通过解决关键的可伸缩性障碍，使原有规范得到更广泛的采用。
 
-为解析器引入可选的 `resolve` 函数，在解析函数中传入了名称和 calldata，这些增加了实现的复杂性，但也为解析器提供了一种方法来获取明文标签并执行相应的程序，使得原本许多不可能实现的通配符相关用例变得可能——例如，通配符解析器可以将 `id.nifty.eth` 指向某个集合中 id 为 `id` 的 NFT 的所有者，而如果只使用名称集，这是不可能的。面向简单需求的解析器可以继续直接实现解析函数，并完全忽略对 `resolve` 函数的支持。
+为解析器引入可选的 `resolve` 函数，在解析函数中传入了名称和 calldata，这些增加了实现的复杂性，但也为解析器提供了一种方法来获取明文标签并执行相应的程序，使得原本许多不可能实现的通配符相关用例变得可能——例如，通配符解析器可以将 `id.nifty.eth` 指向某个集合中 id 为 `id` 的 NFT 的所有者，而如果只使用名称集，这是不可能的。
 
 DNS wireformat 用于名称编码，因为它能够快速且高效地进行名称哈希，以及其他类似获取或删除单个标签的常见操作，相反，点分隔的名称需要遍历名称中的每个字符来找到分隔符。
 
 ### 向后兼容性
 
 兼容 ENSIP-1 的现有 ENS 客户端将无法解析通配符记录并拒绝与之交互，而符合 ENSIP-10 的客户端将继续正确解析或拒绝现有 ENS 记录。希望为非通配符的用例实现新的 `resolve` 函数 (例如，解析器直接设置在被解析的名称上) 的解析器，应该考虑将什么返回给调用单个解析函数的旧客户端，以获得最大的兼容性。
+
+要求客户端避免在通配符解析器上调用现有的解析函数 (如 `addr` 等)，可以防止解析器在返回所有名称的查询时出现意外的向后兼容问题。
 
 ### 安全注意事项
 

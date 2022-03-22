@@ -1,6 +1,6 @@
 ---
 part: ENS 中文文档
-title: ENS 链下数据支持（包含 L2 ）
+title: ENS L2 和链下数据支持
 ---
 
 ## 重要提示
@@ -11,8 +11,8 @@ ENS 链外数据支持的开发仍在进行中，下面描述的解决方案还�
 
 随着以太坊 L2 解决方案的普及，以太坊开始走向成熟，重要的是 ENS 能够在整个生态系统中提供解析服务，并使 ENS 用户能够享受 L2 解决方案所带来的效率。在 [Vitalik](https://ethereum-magicians.org/t/a-general-purpose-l2-friendly-ens-standard/4591) 的一篇文章提出了一种可能的方法之后，ENS 团队以及 ENS 和 L2 社区一直在构建一个通用的“ L2 桥”，它能为 ENS 和其他应用程序提供跨平台的互操作性并提出标准，这些应用程序需要以零信任的方式从各种链下数据源 (存储在以太坊主网之外的任何数据，这包括专有数据库和 L2 解决方案，如 Optimism、Arbitrum、Starkware、ZKSync 等等) 来获取数据。
 
-- [EIP-3668: CCIP Read: 安全地获取链外数据](https://eips.ethereum.org/EIPS/eip-3668)
-- [ENSIP 10: 通配符解析](/docs/ens-improvement-proposals/ensip-10-wildcard-resolution.html)
+* [EIP-3668: CCIP Read: 安全地获取链外数据](https://eips.ethereum.org/EIPS/eip-3668)
+* [ENSIP 10: 通配符解析](/docs/ens-improvement-proposals/ensip-10-wildcard-resolution.html)
 
 **EIP 3668** 允许以一种对客户透明的方式进行链下 (包括 L2 ) 数据查询，并可以让合约的作者实现任何必要的验证。在许多情况下，如果数据存储在链上，则无需任何额外的信任假设。
 
@@ -22,8 +22,8 @@ ENS 链外数据支持的开发仍在进行中，下面描述的解决方案还�
 
 如果你的 dapp 或钱包使用了下面的库，EIP 3668 和 ENSIP 10 支持将被内置，所以只要在准备好时更新库即可。
 
-- [ethersjs](https://github.com/ethers-io/ethers.js)
-- [web3js](https://github.com/ethereum/web3.js)
+* [ethersjs](https://github.com/ethers-io/ethers.js)
+* [web3js](https://github.com/ethereum/web3.js)
 
 ### ethersjs
 

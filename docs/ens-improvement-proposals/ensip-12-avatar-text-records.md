@@ -55,21 +55,21 @@ ENS 主名称 (以前称为反向记录) 已经被广泛集成为许多基于以
 
 所有客户端都应该支持下面定义的 URI 方案。它们可以实现本规范中未定义的附加方案。
 
-##### `https`
+**`https`**
 
 如果提供的是 https URI，它必须直接解析为头像图像。https URL 不能解析为 HTML 页面、元数据或其他包含头像的内容。
 
-##### `ipfs`
+**`ipfs`**
 
 如果提供的是 [ipfs URI](https://docs.ipfs.io/how-to/address-ipfs-on-web/#native-urls)，它必须直接解析为头像图像。没有内置 IPFS 支持的客户端可以在解析为 https URL 之前，将 URI 重写为引用 IPFS 网关的 https URL，如[这篇文档](https://docs.ipfs.io/how-to/address-ipfs-on-web/)所述。
 
-##### `data`
+**`data`**
 
 如果提供的是 [data URL](https://datatracker.ietf.org/doc/html/rfc2397)，它必须直接解析为头像图像。
 
-##### NFT
+**NFT**
 
-对 NFT 的引用可以作为头像 URI 使用，遵循在 [CAIP-22](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-22.md) 和 [CAIP-29](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/CAIP-29.md) 中定义的标准。
+对 NFT 的引用可以作为头像 URI 使用，遵循在 [CAIP-22](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-22.md) 和 [CAIP-29](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-29.md) 中定义的标准。
 
 客户端必须至少支持 ERC721 和 ERC1155 类型的 NFT，并且可以支持其他类型的 NFT。
 

@@ -79,8 +79,8 @@ const encoder = require('@ensdomains/address-encoder')
 
 以下 EVM 链是这个标准的例外。
 
-- AVAX = AVAX 有多链地址格式，只有 c 链兼容 EVM
-- RSK = RSK 有自己的额外验证
+* AVAX = AVAX 有多链地址格式，只有 c 链兼容 EVM
+* RSK = RSK 有自己的额外验证
 
 他们将继续使用在 SLIP44 定义的代币类型
 
@@ -88,18 +88,18 @@ const encoder = require('@ensdomains/address-encoder')
 
 在引入这个新标准之前，存在以下 EVM 兼容的类型。
 
-- NRG
-- POA
-- TT
-- CELO
-- CLO
-- TOMO
-- EWT
-- THETA
-- GO
-- FTM
-- XDAI
-- ETC
+* NRG
+* POA
+* TT
+* CELO
+* CLO
+* TOMO
+* EWT
+* THETA
+* GO
+* FTM
+* XDAI
+* ETC
 
 出于向后兼容的目的显示它们时，将 `_LEGACY` 附加到代币类型并使其为只读。
 

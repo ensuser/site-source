@@ -1,6 +1,6 @@
 ---
 part: ENS 中文文档
-title: DNS Registrar
+title: DNS 注册器
 ---
 
 在 ENS 上，有两个关于 DNS 的智能合约，[DNSSECOracle](https://github.com/ensdomains/dnssec-oracle) 和 [DNSRegistrar](https://github.com/ensdomains/dnsregistrar)。
