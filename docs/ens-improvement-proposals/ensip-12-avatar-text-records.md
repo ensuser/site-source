@@ -67,7 +67,7 @@ ENS 主名称 (以前称为反向记录) 已经被广泛集成为许多基于以
 
 如果提供的是 [data URL](https://datatracker.ietf.org/doc/html/rfc2397)，它必须直接解析为头像图像。
 
-**NFT**
+**`NFT`**
 
 对 NFT 的引用可以作为头像 URI 使用，遵循在 [CAIP-22](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-22.md) 和 [CAIP-29](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-29.md) 中定义的标准。
 

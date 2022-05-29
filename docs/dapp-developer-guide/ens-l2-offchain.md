@@ -3,10 +3,6 @@ part: ENS 中文文档
 title: ENS L2 和链下数据支持
 ---
 
-## 重要提示
-
-ENS 链外数据支持的开发仍在进行中，下面描述的解决方案还没有在生产环境中使用。因此，本文主要是为了提供信息而编写的，以便 dapp 和钱包开发人员在完全支持集成后可以为集成做准备。
-
 ## 摘要
 
 随着以太坊 L2 解决方案的普及，以太坊开始走向成熟，重要的是 ENS 能够在整个生态系统中提供解析服务，并使 ENS 用户能够享受 L2 解决方案所带来的效率。在 [Vitalik](https://ethereum-magicians.org/t/a-general-purpose-l2-friendly-ens-standard/4591) 的一篇文章提出了一种可能的方法之后，ENS 团队以及 ENS 和 L2 社区一直在构建一个通用的“ L2 桥”，它能为 ENS 和其他应用程序提供跨平台的互操作性并提出标准，这些应用程序需要以零信任的方式从各种链下数据源 (存储在以太坊主网之外的任何数据，这包括专有数据库和 L2 解决方案，如 Optimism、Arbitrum、Starkware、ZKSync 等等) 来获取数据。
@@ -27,9 +23,37 @@ ENS 链外数据支持的开发仍在进行中，下面描述的解决方案还�
 
 ### ethersjs
 
-目前，EIP 3668 是作为 npm 模块实现的: [@chainlink/ethers-ccip-read-provider
-](@chainlink/ethers-ccip-read-provider
-)([source](https://github.com/smartcontractkit/ccip-read/tree/rewrite/packages/ethers-ccip-read-provider)).
+5.6.1 同时支持 EIP3668 和 ENSIP 10。
+
+只要你的应用通过 [etherjs ENS methods](https://docs.ethers.io/v5/api/providers/provider/#Provider--ens-methods) 与 ENS 交互，就不需要更改代码。
+
+为了试用这些功能，`offchainexample.eth` 指向了所谓的 “链下解析器”，它从托管在谷歌应用引擎上的 JSON 配置文件中获取数据。它能反馈 offchainexample.eth 及其子域（比如 `2.offchainexample.eth`）的任意记录。这个示例解析器没有使用 L2 上的数据，但当 L2 上的解析器准备就绪时，会采用同样的机制。
+
+```js
+const { ethers } = require("ethers");
+const url = `https://mainnet.infura.io/v3/${process.env.API_KEY}`
+const provider = new ethers.providers.JsonRpcProvider(url);
+async function main(){
+  let resolver = await provider.getResolver('1.offchainexample.eth')
+  let address = await provider.resolveName('1.offchainexample.eth')
+  let email = await resolver.getText('email')
+  console.log({resolver:resolver.address, address, email})
+}
+main()
+```
+
+预期输出如下。
+
+```
+$node index.js
+{
+  resolver: '0xC1735677a60884ABbCF72295E88d47764BeDa282',
+  address: '0x41563129cDbbD0c5D3e1c86cf9563926b243834d',
+  email: 'nick@ens.domains'
+}
+```
+
+[@chainlink/ethers-ccip-read-provider](@chainlink/ethers-ccip-read-provider/)([source](https://github.com/smartcontractkit/ccip-read/tree/rewrite/packages/ethers-ccip-read-provider)) 的实现同样将 EIP 3668 作为一个独立的 npm 模块。
 
 基本的用法示例如下。
 
@@ -40,8 +64,6 @@ const IExtendedResolver = new ethers.utils.Interface(IExtendedResolver_abi);
 const baseProvider = ethers.getDefaultProvider(options.provider);
 const provider = new CCIPReadProvider(baseProvider);
 ```
-
-目前还不支持通配符。
 
 详情请参考[链下解析器客户端示例代码](https://github.com/ensdomains/offchain-resolver/blob/main/packages/client/src/index.ts#L46)。
 

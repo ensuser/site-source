@@ -52,6 +52,7 @@ docs:
     ens-as-nft: /docs/dapp-developer-guide/ens-as-nft.html
     ens-l2-offchain: /docs/dapp-developer-guide/ens-l2-offchain.html
   contract-api-reference:
+    ens-contracts-overview: /docs/contract-api-reference/ens-contracts-overview.html
     name-processing: /docs/contract-api-reference/name-processing.html
     ens: /docs/contract-api-reference/ens.html
     reverseregistrar: /docs/contract-api-reference/reverseregistrar.html

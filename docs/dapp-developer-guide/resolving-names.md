@@ -82,7 +82,7 @@ YourSmartContract contract = YourSmartContract.load(
 2. 在 ENS 注册表上调用 `resolver()` ，并将第 1 步输出的哈希作为参数传递，然后 `resolver()` 会返回负责解析这个名称的解析器的地址。
 3. 使用 [resolver 接口](https://github.com/ensdomains/resolvers/blob/master/contracts/Resolver.sol) ，在第 2 步返回的解析器地址上调用 `addr()` ，并将第1步输出的哈希作为参数传递。
 
-对其他区块链地址的支持是通过重载 `addr()` 来实现的。要解析非以太坊的地址，必须要有相应加密货币的 Namehash 和符合 [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.html) 规范的链 ID 。例如，要解析一个比特币地址，可以调用 `addr(hash, 0)` 。注意，返回的地址是用二进制表示的，因此要通过解码来得到文本格式的地址，详细内容请参阅 [EIP2304](https://eips.ethereum.org/EIPS/eip-2304) 。
+对其他区块链地址的支持是通过重载 `addr()` 来实现的。要解析非以太坊的地址，必须要有相应加密货币的 Namehash 和符合 [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) 规范的链 ID 。例如，要解析一个比特币地址，可以调用 `addr(hash, 0)` 。注意，返回的地址是用二进制表示的，因此要通过解码来得到文本格式的地址，详细内容请参阅 [EIP2304](https://eips.ethereum.org/EIPS/eip-2304) 。
 
 {% note warn %}
 使用 `addr()` 进行解析时，必须将来自解析器 0x00…00 的返回值视为未设置的记录。否则，在用户配置了解析器却没有为名称设置解析地址的情况下，可能导致用户的资金被发送到空地址!
@@ -131,6 +131,7 @@ Not supported.
 采用 **ethers.js** 时：
 
 ```javascript
+  const resolver = await provider.getResolver('abittooawesome.eth');
   const contentHash = await resolver.getContentHash();
   const btcAddress = await resolver.getAddress(0);
   const dogeAddress = await resolver.getAddress(3);

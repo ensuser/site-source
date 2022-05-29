@@ -43,7 +43,7 @@ DNSSEC（DNS 安全扩展）构建了一个从 ICANN（.）签署的根密钥开
 
 ### 我可以通过 ENS APP 注册所有 DNS 域名吗
 
-理论上说，[90% 以上的名称](https://medium.com/the-ethereum-name-service/upcoming-changes-to-the-ens-root-a1b78fd52b38)都可以。还有一些顶级名称（`ceo`, `.art`, `.club`, `.luxe` 和 `.kred`）是通过他们自己的注册器来操作的。
+理论上说，[90% 以上的名称](https://medium.com/the-ethereum-name-service/upcoming-changes-to-the-ens-root-a1b78fd52b38)都可以。还有一些顶级名称（`.ceo`, `.art`, `.club`, `.luxe` 和 `.kred`）是通过他们自己的注册器来操作的。
 
 ### 如果我拥有 `myname.xyz` 这个 DNS 域名，那我可以声明 `myname.eth` 的所有权吗
 

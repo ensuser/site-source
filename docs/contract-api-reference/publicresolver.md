@@ -92,7 +92,7 @@ function setAddr(bytes32 node, uint coinType, bytes calldata addr) external;
 
 将与 `node` 和 `coinType` 相应的区块链地址设置为 `addr` 。
 
-`coinType` 是加密货币类型索引，它由 [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.html) 定义。
+`coinType` 是加密货币类型索引，它由 [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) 定义。
 
 要将地址转换为二进制表示，请使用 [address-encoder](https://github.com/ensdomains/address-encoder)（地址编码器）的 `formatsByCoinType[SYMBOL].encoder(binary)` 方法。
 
