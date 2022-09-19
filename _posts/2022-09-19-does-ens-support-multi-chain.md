@@ -30,15 +30,15 @@ description:
 
 ENS 的创始人 [Nick](https://twitter.com/nicksdjohnson) 在 2019 年 9 月提出的 [ENSIP-9: 多链地址解析](https://ensuser.com/docs/ens-improvement-proposals/ensip-9-multichain-address-resolution.html)（即 [EIP-2304](https://eips.ethereum.org/EIPS/eip-2304)）对 ENS 的全链解析进行了标准化，同年 10 月份，就有 [15 个主流钱包支持了这一标准](https://medium.com/the-ethereum-name-service/ens-launches-multi-coin-support-15-wallets-to-integrate-92518ab20599)。也就是说 ENS 在 2019 年就已经支持全链解析，并得到行业的广泛支持。
 
-此外，2022 年 10 月，ENS 核心团队成员 [Makoto](https://twitter.com/makoto_inoue) 撰写了 [ENSIP-11: EVM 兼容链的地址解析](https://ensuser.com/docs/ens-improvement-proposals/ensip-11-evmchain-address-resolution.html)，旨在修正前面提到的 ENSIP-9，主要目的是减少向 SLIP-0044 增加不必要的链 ID。通俗点讲就是，不仅要支持全链，还要避免币种标识的泛滥。
+此外，2022 年 1 月，ENS 核心团队成员 [Makoto](https://twitter.com/makoto_inoue) 撰写了 [ENSIP-11: EVM 兼容链的地址解析](https://ensuser.com/docs/ens-improvement-proposals/ensip-11-evmchain-address-resolution.html)，旨在修正前面提到的 ENSIP-9，主要目的是减少向 SLIP-0044 增加不必要的链 ID。通俗点讲就是，不仅要支持全链，还要避免币种标识的泛滥。
 
 ## 2. 从产权角度来看
 
 从资产所有权的角度来看，ENS 仅支持单链，即以太坊主网。
 
-DID 作为一种数字资产，尤其是 ENS 名称作为一种数次占据 OpenSea 交易量榜首的 NFT 数字资产，有必要考虑在持有这类资产时，是仅能单链持有，还是可以多链持有，尤其要考虑我们的资产所有权是受哪条链来保护。
+DID 作为一种数字资产，尤其是 ENS 名称作为一种数次占据 OpenSea 交易量榜首的 NFT 数字资产，有必要考虑在持有这类资产时，是仅能单链持有，还是可以多链持有，尤其要考虑我们的资产所有权是受哪条链保护。
 
-ENS 作为资产仅目前支持存储在以太坊主网，即所有的 ENS 名称都只能通过以太坊主网来持有、转让，并受以太坊的安全体系的保护。这里有一篇文章说明了 [ENS 为什么选择了以太坊](https://ensuser.com/news/2019-02-12-why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token.html)。
+ENS 作为资产目前仅支持存储在以太坊主网，即所有的 ENS 名称都只能通过以太坊主网来持有、转让，并受以太坊的安全体系的保护。这里有一篇文章说明了 [ENS 为什么选择了以太坊](https://ensuser.com/news/2019-02-12-why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token.html)。
 
 那么 ENS 未来会不会针对产权开启多链支持？我认为基本不会，一是因为以太坊提足够安全，二是因为这并不会增加实用性，三是因为会导致系统的过于复杂。
 
