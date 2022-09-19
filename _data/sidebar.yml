@@ -41,6 +41,7 @@ docs:
       ensip-10: /docs/ens-improvement-proposals/ensip-10-wildcard-resolution.html
       ensip-11: /docs/ens-improvement-proposals/ensip-11-evmchain-address-resolution.html
       ensip-12: /docs/ens-improvement-proposals/ensip-12-avatar-text-records.html
+      ensip-13: /docs/ens-improvement-proposals/ensip-13-secondary-authentication-for-ens.html
   dapp-developer-guide:
     ens-enabling-your-dapp: /docs/dapp-developer-guide/ens-enabling-your-dapp.html
     ens-libraries: /docs/dapp-developer-guide/ens-libraries.html
