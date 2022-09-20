@@ -8,6 +8,8 @@ translator:
 description: 
 ---
 
+![](/images/news/2022-09-19-does-ens-support-multi-chain/01.jpg)
+
 [DID](https://ethereum.org/en/decentralized-identity/)（去中心化身份，它可以有很多种形式和载体，本文中的 DID 特指以 ENS 为代表的去中心化域名/名称/名字）作为 Web3 的一项基础设施，近来由于 ENS 社区的火热和多个同类项目的发布、发展而受到越来越多的关注。在众多关于各个 DID 项目特点的声音中，“单链”和“多链”经常被当作一项重要的比较指标。那么 ENS 是单链的还是多链的？
 
 横看成岭侧成峰。
@@ -26,11 +28,11 @@ description:
 
 没有人能否认 ENS 为 DID 做出的诸多开创性成果，多链支持只是其中并不起眼的贡献之一。
 
-尽管多链支持现在已经非常普遍，但 2017 年的 ENS 确实只支持以太坊这一条公链。对了，那个时候没有 Unstoppabeldomains，更没有 SpaceID。
+尽管多链支持现在已经非常普遍，但 2017 年的 ENS 确实只支持以太坊这一条公链。对了，那个时候没有 Unstoppable Domains，更没有 Space ID。
 
-ENS 的创始人 [Nick](https://twitter.com/nicksdjohnson) 在 2019 年 9 月提出的 [ENSIP-9: 多链地址解析](https://ensuser.com/docs/ens-improvement-proposals/ensip-9-multichain-address-resolution.html)（即 [EIP-2304](https://eips.ethereum.org/EIPS/eip-2304)）对 ENS 的全链解析进行了标准化，同年 10 月份，就有 [15 个主流钱包支持了这一标准](https://medium.com/the-ethereum-name-service/ens-launches-multi-coin-support-15-wallets-to-integrate-92518ab20599)。也就是说 ENS 在 2019 年就已经支持全链解析，并得到行业的广泛支持。
+ENS 的创始人 [Nick](https://twitter.com/nicksdjohnson) 在 2019 年 9 月提出的 [ENSIP-9: 多链地址解析](/docs/ens-improvement-proposals/ensip-9-multichain-address-resolution.html)（即 [EIP-2304](https://eips.ethereum.org/EIPS/eip-2304)）对 ENS 的全链解析进行了标准化，同年 10 月份，就有 [15 个主流钱包支持了这一标准](https://medium.com/the-ethereum-name-service/ens-launches-multi-coin-support-15-wallets-to-integrate-92518ab20599)。也就是说 ENS 在 2019 年就已经支持全链解析，并得到行业的广泛支持。
 
-此外，2022 年 1 月，ENS 核心团队成员 [Makoto](https://twitter.com/makoto_inoue) 撰写了 [ENSIP-11: EVM 兼容链的地址解析](https://ensuser.com/docs/ens-improvement-proposals/ensip-11-evmchain-address-resolution.html)，旨在修正前面提到的 ENSIP-9，主要目的是减少向 SLIP-0044 增加不必要的链 ID。通俗点讲就是，不仅要支持全链，还要避免币种标识的泛滥。
+此外，2022 年 1 月，ENS 核心团队成员 [Makoto](https://twitter.com/makoto_inoue) 撰写了 [ENSIP-11: EVM 兼容链的地址解析](/docs/ens-improvement-proposals/ensip-11-evmchain-address-resolution.html)，旨在修正前面提到的 ENSIP-9，主要目的是减少向 SLIP-0044 增加不必要的链 ID。通俗点讲就是，不仅要支持全链，还要避免币种标识的泛滥。
 
 ## 2. 从产权角度来看
 
@@ -38,7 +40,7 @@ ENS 的创始人 [Nick](https://twitter.com/nicksdjohnson) 在 2019 年 9 月提
 
 DID 作为一种数字资产，尤其是 ENS 名称作为一种数次占据 OpenSea 交易量榜首的 NFT 数字资产，有必要考虑在持有这类资产时，是仅能单链持有，还是可以多链持有，尤其要考虑我们的资产所有权是受哪条链保护。
 
-ENS 作为资产目前仅支持存储在以太坊主网，即所有的 ENS 名称都只能通过以太坊主网来持有、转让，并受以太坊的安全体系的保护。这里有一篇文章说明了 [ENS 为什么选择了以太坊](https://ensuser.com/news/2019-02-12-why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token.html)。
+ENS 作为资产目前仅支持存储在以太坊主网，即所有的 ENS 名称都只能通过以太坊主网来持有、转让，并受以太坊的安全体系的保护。这里有一篇文章说明了 [ENS 为什么选择了以太坊](/news/2019-02-12-why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token.html)。
 
 那么 ENS 未来会不会针对产权开启多链支持？我认为基本不会，一是因为以太坊提足够安全，二是因为这并不会增加实用性，三是因为会导致系统的过于复杂。
 
@@ -50,7 +52,7 @@ ENS 目前默认支持在以太坊主网对名称进行管理维护（比如解�
 
 起初，ENS 的管理信息，包括解析器和解析记录，都是存储在以太坊主网，管理维护需要通过以太坊主网交互来完成。由于 ENS 以及整个 DID 生态的基础设施属性，这些名称正在产生庞大的管理维护需求，而以太坊主网上的高昂的交互成本则是这些需求的巨大阻力。比如有一些需要大量分发子名称的应用场景，以及动态更新 IPFS 站点地址的应用场景，要么难以实现，要么采取了折衷的办法。
 
-好在 ENS 核心团队很早就开始着手解决这方面的问题，他们的方案是让用户可以选择通过以太坊主网以外的二层网络或其他数据来进行 ENS 名称的管理维护。2020 年 10 月，Nick 为此撰写了 [《一种以太坊 Layer-2 的通用桥》](https://ensuser.com/news/2020-10-30-a-general-purpose-bridge-for-ethereum-layer-2s.html)，这篇文章指出了一种可以安全地从以太坊主网以外获取数据的方法，其主要内容后来形成了 [EIP-3668](https://eips.ethereum.org/EIPS/eip-3668)。ENS 文档中已经增加了 [ENS 从二层和链外获取数据支持的说明](https://ensuser.com/docs/dapp-developer-guide/ens-l2-offchain.html)。
+好在 ENS 核心团队很早就开始着手解决这方面的问题，他们的方案是让用户可以选择通过以太坊主网以外的二层网络或其他数据来进行 ENS 名称的管理维护。2020 年 10 月，Nick 为此撰写了 [《一种以太坊 Layer-2 的通用桥》](/news/2020-10-30-a-general-purpose-bridge-for-ethereum-layer-2s.html)，这篇文章指出了一种可以安全地从以太坊主网以外获取数据的方法，其主要内容后来形成了 [EIP-3668](https://eips.ethereum.org/EIPS/eip-3668)。ENS 文档中已经增加了 [ENS 从二层和链外获取数据支持的说明](/docs/dapp-developer-guide/ens-l2-offchain.html)。
 
 比如，今年 7 月份，[Coinbase 与 ENS 合作上线的 DID 服务](https://help.coinbase.com/en/wallet/managing-account/coinbase-ens-support)，其对 cb.id 子名称的管理维护就是在以太坊主网之外进行的。
 
