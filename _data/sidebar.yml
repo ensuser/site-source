@@ -81,7 +81,7 @@ about:
     about-ensuser: /about/
     about-ens: /about/about-ens.html
     about-ensdomains: /about/about-ensdomains.html
-    about-domains: /about/about-domains.html
+    # about-domains: /about/about-domains.html
     about-cooperation: /about/about-cooperation.html
 news:
   title:
