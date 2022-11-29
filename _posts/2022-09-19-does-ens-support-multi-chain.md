@@ -1,8 +1,8 @@
 ---
 title: 放下傲慢与偏见，看 ENS 是单链还是多链
 date: 2022-09-19 13:30:00
-categories: 社区交流
-original: 
+categories: 观点与评论
+original: https://mirror.xyz/liubenben.eth/OXsOBDTji2rayfrfOnMZnY1II_rKUEGim-sO5NMAOsw
 author: liubenben.eth
 translator: 
 description: 
